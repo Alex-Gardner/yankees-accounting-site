@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Yankees Accounting - Full Service Accounting Firm NYC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yankees Accounting Inc main page. Taxes, Payroll NYC" /> <!-- WIP: UPDATE-->
+    <link rel="icon" href="*icon image URL*" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div id="outer-holder" class="outer-holder dark">
+        <main class="main-content-holder">
+            
+            <header class="site-header">
+
+                <a href="#" class="home-link">
+                    <img src="./assets/sample-icon.svg" alt="" class="company-logo">
+                </a>
+                
+                <button id="light-dark-holder" class="light-dark-holder" onclick="toggleLightDarkMode()"> 
+                    <p class="mode-change-text">
+                        To <span id="light-dark-text" class="light-dark-text">Light</span> Mode
+                    </p>
+                    <svg class="light-dark-mode-arrow" width="20" height="50" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.0607 13.0607C35.6464 12.4749 35.6464 11.5251 35.0607 10.9393L25.5147 1.3934C24.9289 0.807614 23.9792 0.807614 23.3934 1.3934C22.8076 1.97919 22.8076 2.92893 23.3934 3.51472L31.8787 12L23.3934 20.4853C22.8076 21.0711 22.8076 22.0208 23.3934 22.6066C23.9792 23.1924 24.9289 23.1924 25.5147 22.6066L35.0607 13.0607ZM-1.31134e-07 13.5L34 13.5L34 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#FFECC8"/>
+                    </svg>
+                </button>
+
+                <button id="mobile-hamburger-button" class="mobile-hamburger-button" onclick="toggleMenuVisible()">
+                    <img src="./assets/hamburger-svg.svg" alt="" class="hamburger-svg">
+                </button>
+
+                <nav id="menu-holder" class="menu-holder">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">About</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Specialties</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Testimonials</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="splash-page-overlay">
+                <picture class="main-image-holder">
+                    <source  srcset="./assets/luca-colapinto-ez8VC2Hzd84-unsplash.jpg" 
+                    media="(min-width: 900px)">
+                    <img src="./assets/drew-beamer-9uX5cX1l3bw-unsplash.jpg" alt="" class="hero-mobile-img">
+                </picture>
+                <div class="splash-content-holder">
+
+                    <h1 class="firm-title">Yankees Accounting Incoporated</h1>
+                    <div class="accent-divider"></div>
+                    <p class="company-advertisement-blurb">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum id ipsum sed eleifend.
+                        Nunc porta lacinia turpis, in maximus sapien venenatis vitae. Aenean a fringilla nisi. Pellentesque 
+                        suscipit purus ut tempor feugiat. Donec lacinia vitae ligula non aliquet. Nullam sagittis turpis at sapien 
+                        dictum, nec euismod nisi cursus. Duis urna lacus, faucibus quis augue sit amet,
+                    </p>
+                    <button class="learn-more-button">
+                       <p class="learn-more-text">
+                           See What We Do
+                       </p>
+                        <div class="arrow-container">
+                            <svg class="button-arrow-svg" width="70" height="47" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M35.0607 13.0607C35.6464 12.4749 35.6464 11.5251 35.0607 10.9393L25.5147 1.3934C24.9289 0.807614 23.9792 0.807614 23.3934 1.3934C22.8076 1.97919 22.8076 2.92893 23.3934 3.51472L31.8787 12L23.3934 20.4853C22.8076 21.0711 22.8076 22.0208 23.3934 22.6066C23.9792 23.1924 24.9289 23.1924 25.5147 22.6066L35.0607 13.0607ZM-1.31134e-07 13.5L34 13.5L34 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#171717"/>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <h2 class="service-section-title">What We Do For You:</h2>
+            <div class="service-holder">
+                
+                <div class="service-item">
+                    <h3 class="service-header">Service 1</h3>
+                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum id ipsum sed eleifend.
+                        Nunc porta lacinia turpis, in maximus sapien venenatis vitae.</p>
+                </div>
+            
+                    <div class="service-item">
+                        <h3 class="service-header">Service 2</h3>
+                        <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum id ipsum sed eleifend.
+                            Nunc porta lacinia turpis, in maximus sapien venenatis vitae.</p>
+                    </div>
+
+                <div class="service-item">
+                    <h3 class="service-header">Service 3</h3>
+                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum id ipsum sed eleifend.
+                        Nunc porta lacinia turpis, in maximus sapien venenatis vitae.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3 class="service-header">Service 4</h3>
+                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum id ipsum sed eleifend.
+                        Nunc porta lacinia turpis, in maximus sapien venenatis vitae.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3 class="service-header">Service 5</h3>
+                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum id ipsum sed eleifend.
+                        Nunc porta lacinia turpis, in maximus sapien venenatis vitae.</p>
+                </div>
+
+                <div class="service-item">
+                    <h3 class="service-header">Service 6</h3>
+                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus elementum id ipsum sed eleifend.
+                        Nunc porta lacinia turpis, in maximus sapien venenatis vitae.</p>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <script async src="main.js"></script>
+</body>
+</html>
