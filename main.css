@@ -291,11 +291,6 @@ body {
     .site-header {
         justify-content: space-evenly;
     }
-    .light-dark-holder {
-        /* position: absolute; */
-        /* top: 70px;
-        right: 55%; */
-    }
     .mobile-hamburger-button {
         display: none;
     }
