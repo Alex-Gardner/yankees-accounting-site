@@ -46,6 +46,7 @@ body {
     --serviceDescriptionTextColor: hsla(0 0% 38% / 100%);
     --buttonAccentColor: hsla(0 0% 0% / 100%);
     --buttonArrowAccent: hsla(39 100% 89% / 100%);
+    --imageOverlayShade: hsla(0 0% 100% / 80%);
 }
 .outer-holder.dark {
     --mainBGColor: hsla(0 0% 9% / 100%);
@@ -64,6 +65,7 @@ body {
     --serviceDescriptionTextColor: hsla(0 0% 82% / 100%);
     --buttonAccentColor: hsla(39 100% 80% / 100%);
     --buttonArrowAccent: hsla(0 0% 9% / 100%);
+    --imageOverlayShade: hsla(0 0% 10% / 90%);
 }
 
 
@@ -227,8 +229,8 @@ body {
     display: none;
 }
 
-
-.service-holder {
+.service-holder-bg {
+    display: none;
 }
 .service-item {
     display: flex;
@@ -242,12 +244,46 @@ body {
 }
 .service-header {
     color: var(--secondaryContrastColor);
-    font-weight: 200;
+    font-weight: 400;
 }
 .service-description {
     color: var(--serviceDescriptionTextColor);
     font-size: .7em;
     padding: 5%;
+    padding-top: 2%;
+}
+.consultation-offer-holder {
+    position: relative;
+    min-height: 60vw; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.consultation-splash-img {
+    width: 95vw;
+    height: 95vw;
+    object-fit: cover;
+}
+.free-consult-blurb {
+    position: absolute;
+    text-align: center;
+    color: hsla(187 100% 40% / 100%);
+    top: 15%;
+    left: 10%;
+    background: linear-gradient(90deg, hsla(0 0% 9% / 89%), hsla(0 0% 9% / 63%));
+    width: clamp(200px, 80%, 350px);
+}
+.free-consult-blurb span {
+    color: var(--accentColorTinted);
+}
+
+/* ---------------
+    Footer
+---------------- */
+
+.main-page-footer {
+    background-color: hsla(216 42% 8% / 100%);
+    width: 100%;
 }
 
 
@@ -333,6 +369,7 @@ body {
         justify-content: center;
         color: #fff;
         flex-grow: 1;
+        flex-basis: 60%;
         height: 100%;
         font-size: 1.4em;
         font-family: 'Oswald', sans-serif;
@@ -350,12 +387,49 @@ body {
         fill: var(--buttonArrowAccent);
     }
     .service-holder {
+        position: relative;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        background-color: var(--imageOverlayShade);
+    }
+    .service-holder-bg {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+    .service-holder-bg-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
     .service-item {
         max-width: 40%;
+    }
+    .consultation-offer-holder {
+        position: relative;
+        min-height: 60vw; 
+        width: 100%;
+    }
+    .consultation-splash-img {
+        height: 50vw;
+        width: 50vw;
+        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+    .free-consult-blurb {
+        position: absolute;
+        text-align: center;
+        color: hsla(187 100% 40% / 100%);
+        top: 15%;
+        left: 20%;
+        background: linear-gradient(90deg, hsla(0 0% 9% / 89%), hsla(0 0% 9% / 63%));
+        width: 400px;
     }
 }
