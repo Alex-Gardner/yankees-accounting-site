@@ -4,6 +4,7 @@ const pageRoot = document.querySelector('#outer-holder');
 const lightDarkButton = document.querySelector('#light-dark-holder');
 const lightDarkText = document.querySelector('#light-dark-text')
 const serviceHolderBGIMG = document.querySelector('#service-holder-bg-img')
+const serviceItemList = document.querySelectorAll('.service-item')
 
 
 function toggleMenuVisible() {
@@ -25,3 +26,11 @@ function toggleLightDarkMode() {
         serviceHolderBGIMG.src = './assets/jamie-street-dO9zecIYnWA-unsplash.jpg'
     }
 }
+
+
+serviceItemList.forEach(serviceItem => {
+    const proceedLinkHolder = document.createElement('div')
+    proceedLinkHolder.classList.add('proceed-img-holder')
+    proceedLinkHolder.innerHTML = '<img src="./assets/next-chevron.svg" alt="go to page">' 
+    serviceItem.appendChild(proceedLinkHolder)
+})

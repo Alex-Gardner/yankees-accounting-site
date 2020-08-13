@@ -260,6 +260,7 @@ body {
     position: relative;
     border-radius: 8px;
     box-shadow: 5px 3px 10px -2px #474747;
+    flex-basis: 37vw;
 }
 .service-item::after {
     content: "";
@@ -298,10 +299,25 @@ body {
 .service-description {
     color: var(--serviceDescriptionTextColor);
     font-size: .7em;
-    padding: 2% 4%;
+    padding: 2% 8% 2% 4%;
 }
-.service-description::after {
-
+.proceed-img-holder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*top-right, bottom-right rounded borders */
+    background: linear-gradient(90deg, hsla(0 0% 100% / 0%), hsla(0 0% 44% / 50%));
+    border-radius: 0 8px 8px 0;
+}
+.proceed-img-holder img {
+    height: 42px;
+    width: 31px;
+    object-fit: contain;
 }
 .consultation-offer-holder {
     position: relative;
@@ -464,14 +480,21 @@ body {
         border: none;
         box-shadow: none;
         margin-bottom: 30px;
+        height: 142px;
     }
     .service-item::after {
+        display: none;
+    }
+    .proceed-img-holder {
         display: none;
     }
     .service-item:hover {
         /* background-color: var(--serviceItemOverlayShade); */
         border-radius: 20px;
         box-shadow: 15px 10px 20px 5px var(--serviceItemShadow);
+    }
+    .service-item:hover .proceed-img-holder {
+        display: flex;
     }
     .consultation-offer-holder {
         position: relative;
