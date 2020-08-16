@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Yankees Accounting - For Your Accountant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yankees Accounting Inc - For Your Accountant" /> <!-- WIP: UPDATE-->
+    <link rel="icon" href="*icon image URL*" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div id="outer-holder" class="outer-holder dark">
+        <main class="main-content-holder">
+            
+            <header class="site-header">
+
+                <a href="./index.html" class="home-link">
+                    <img src="./assets/sample-icon.svg" alt="" class="company-logo">
+                </a>
+                
+                <button id="light-dark-holder" class="light-dark-holder" onclick="toggleLightDarkMode()"> 
+                    <p class="mode-change-text">
+                        To <span id="light-dark-text" class="light-dark-text">Light</span> Mode
+                    </p>
+                    <svg class="light-dark-mode-arrow" width="20" height="50" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.0607 13.0607C35.6464 12.4749 35.6464 11.5251 35.0607 10.9393L25.5147 1.3934C24.9289 0.807614 23.9792 0.807614 23.3934 1.3934C22.8076 1.97919 22.8076 2.92893 23.3934 3.51472L31.8787 12L23.3934 20.4853C22.8076 21.0711 22.8076 22.0208 23.3934 22.6066C23.9792 23.1924 24.9289 23.1924 25.5147 22.6066L35.0607 13.0607ZM-1.31134e-07 13.5L34 13.5L34 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#FFECC8"/>
+                    </svg>
+                </button>
+
+                <button id="mobile-hamburger-button" class="mobile-hamburger-button" onclick="toggleMenuVisible()">
+                    <img src="./assets/hamburger-svg.svg" alt="" class="hamburger-svg">
+                </button>
+
+                <nav id="menu-holder" class="menu-holder">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">About</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Specialties</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="./for-accountant.html" class="menu-link">For Your Accountant</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="for-accountant-hero-section-holder">
+                <img src="./assets/scott-graham-5fNmWej4tAA-unsplash.jpg" alt="" class="for-accountant-hero-img">
+                <h1 class="for-accountant-title">Preparing Tax Records for Your Accountant</h1>
+                <h2 class="sub-header-lighter">Things We Need From You:</h2>
+            </div>
+            <section class="document-details-holder">
+                <div class="detail-item">
+                    <img src="./assets/icons/fin-statement-icon.svg" alt="" class="item-icon">
+                    <h3 class="detail-item-name">Financial Statements</h3>
+                    <p class="detail-item-description">Financial statements for the business and yourself if required, include the profit & loss, income statements, cash flow and balance sheets. if you have them. If you do not, we will create them.</p>
+                </div>
+
+                <div class="detail-item">
+                    <img src="./assets/icons/payroll-icon.svg" alt="" class="item-icon">
+                    <h3 class="detail-item-name">Payroll Information</h3>
+                    <p class="detail-item-description">Payroll information (wages for employees or for yourself - Officer compensation)</p>
+                </div>
+
+                <div class="detail-item">
+                    <img src="./assets/icons/bank-statement-icon.svg" alt="" class="item-icon">
+                    <h3 class="detail-item-name">Bank Statements</h3>
+                    <p class="detail-item-description">Bank statements and canceled checks.<p>
+                </div>
+
+                <div class="detail-item">
+                    <img src="./assets/icons/business-expenses-icon.svg" alt="" class="item-icon">
+                    <h3 class="detail-item-name">Business Expenses</h3>
+                    <p class="detail-item-description">Business expense receipts (travel, advertising, consulting & labor (including cash and temporary laborers), rent, utilities, insurance, Bank & credit card statements, office supplies, maintenance, telephone, internet, raw materials, Repairs and maintenance, and postage & shipping, taxes and licenses, Legal and professional fees)</p>
+                </div>
+
+                <div class="detail-item">
+                    <img src="./assets/icons/motor-vehicles-icon.svg" alt="" class="item-icon">
+                    <h3 class="detail-item-name">Motor Vehicles</h3>
+                    <p class="detail-item-description">Motor vehicle expense information. List business use of auto, operating expenses, vehicle driving log with total & business miles driven.<p>
+                </div>
+
+                <div class="detail-item">
+                    <img src="./assets/icons/startup-icon.svg" alt="" class="item-icon">
+                    <h3 class="detail-item-name">Startup</h3>
+                    <p class="detail-item-description">Business startup and organizational costs.<p>
+                </div>
+
+                <div class="detail-item">
+                    <img src="./assets/icons/assets-sales-purchase-icon.svg" alt="" class="item-icon">
+                    <h3 class="detail-item-name">Asset Sales / Purchases</h3>
+                    <p class="detail-item-description">Asset purchase or sales during the year such as furniture, improvements to office, land, buildings, vehicles, machinery, others.<p>
+                </div>
+                
+                <div class="detail-item">
+                    <img src="./assets/icons/tax-returns-icon.svg" alt="" class="item-icon">
+                    <h3 class="detail-item-name">Previous Tax Returns</h3>
+                    <p class="detail-item-description">Previous year's tax return.<p>
+                </div>
+
+                <div class="detail-item">
+                    <img src="./assets/icons/home-business-icon.svg" alt="" class="item-icon">
+                    <h3 class="detail-item-name">Business From Home</h3>
+                    <p class="detail-item-description">If you used your home for business, use-of-home details — if your home is your principal place of business, or you use the workspace in your home to earn your business income and use it regularly to meet with clients, customers, or patients.<p>
+                </div>
+
+                <div class="detail-item">
+                    <img src="./assets/icons/calendar-taxes-icon.svg" alt="" class="item-icon">
+                    <h3 class="detail-item-name">Taxes Paid / Installments</h3>
+                    <p class="detail-item-description">Taxes paid and dates of installments in the previous year.<p>
+                </div>
+
+                <div class="detail-item">
+                    <img src="./assets/icons/all-income-icon.svg" alt="" class="item-icon">
+                    <h3 class="detail-item-name">All Income</h3>
+                    <p class="detail-item-description">Income from all sources.<p>
+                </div>
+
+                <div class="detail-item">
+                    <img src="./assets/icons/goods-inventory-icon.svg" alt="" class="item-icon">
+                    <h3 class="detail-item-name">Goods and Inventory</h3>
+                    <p class="detail-item-description">Cost of goods sold and inventory - if applicable.<p>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+    <script async src="main.js"></script>
+</body>
+</html>

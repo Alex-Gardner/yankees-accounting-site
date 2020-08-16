@@ -30,7 +30,7 @@ body {
 
 .outer-holder.light {
     --mainBGColor: #fff;
-    --headerBGColor: hsla(0 0% 80% / 59%);
+    --headerBGColor: hsla(0 0% 87% / 72%);
     --headerBGVariableOpacity: hsla(0 0% 95% / 90%);
     --mobileOverlayShade: hsla(0 0% 100% / 79%);
     --headlineColor: #000;
@@ -47,7 +47,7 @@ body {
     --buttonAccentColor: hsla(0 0% 0% / 100%);
     --buttonArrowAccent: hsla(39 100% 89% / 100%);
     --imageOverlayShade: hsla(0 0% 100% / 80%);
-    --serviceItemOverlayShade: hsla(0 0% 100% / 47%);
+    --serviceItemOverlayShade: hsla(0 0% 100% / 70%);
     --serviceItemShadow: #474747;
 }
 .outer-holder.dark {
@@ -68,7 +68,7 @@ body {
     --buttonAccentColor: hsla(39 100% 80% / 100%);
     --buttonArrowAccent: hsla(0 0% 9% / 100%);
     --imageOverlayShade: hsla(0 0% 10% / 90%);
-    --serviceItemOverlayShade: hsla(0 0% 84% / 6%);
+    --serviceItemOverlayShade: hsla(0 0% 0% / 86%);
     --serviceItemShadow: #000;
 }
 
@@ -354,6 +354,90 @@ body {
 }
 
 
+/* ---------------------------------------------------------------------------------------------------------
+                                For Accountant Page
+----------------------------------------------------------------------------------------------------------- */
+.for-accountant-hero-section-holder {
+    position: relative;
+    background-color: var(--serviceItemOverlayShade);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.for-accountant-title {
+    font-weight: 300;
+    text-align: center;
+}
+.sub-header-lighter {
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: 5vh;
+    color: var(--serviceDescriptionTextColor);
+}
+.for-accountant-hero-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+.document-details-holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4vw;
+    margin-top: 12vh;
+    text-align: center;
+    padding: 2vw;
+}
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 80vw;
+    flex-grow: 1;
+    margin-top: 6vh;
+    position: relative;
+}
+.detail-item::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 40vw;
+    bottom: -25px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: var(--secondaryContrastColor);
+}
+.detail-item:last-child::after {
+    display: none;
+}
+.item-icon {
+    height: 110px;
+}
+.detail-item-name {
+    color: var(--secondaryContrastColor);
+    margin: 4% 0;
+    font-weight: 300;
+}
+.detail-item-description {
+    color: var(--serviceDescriptionTextColor);
+    font-weight: 300;
+}
+
+/* ---------------------------------------------------------------------------------------------------------
+                                
+----------------------------------------------------------------------------------------------------------- */
+
+
 @media (min-width: 900px) {
     .site-header {
         justify-content: space-evenly;
@@ -481,6 +565,7 @@ body {
         box-shadow: none;
         margin-bottom: 30px;
         height: 142px;
+        flex-basis: 30vw;
     }
     .service-item::after {
         display: none;
@@ -489,7 +574,6 @@ body {
         display: none;
     }
     .service-item:hover {
-        /* background-color: var(--serviceItemOverlayShade); */
         border-radius: 20px;
         box-shadow: 15px 10px 20px 5px var(--serviceItemShadow);
     }
@@ -519,4 +603,55 @@ body {
         background: linear-gradient(90deg, hsla(0 0% 9% / 89%), hsla(0 0% 9% / 63%));
         width: 400px;
     }
+/* ---------------------------------------------------------------------------------------------------------
+                                For Accountant Page
+----------------------------------------------------------------------------------------------------------- */
+    .for-accountant-hero-section-holder {
+        height: 50vh;
+    }
+    .for-accountant-title {
+        font-weight: 300;
+        text-align: center;
+    }
+    .sub-header-lighter {
+        font-size: 1em;
+        font-weight: 300;
+        margin-top: 5vh;
+        color: var(--serviceDescriptionTextColor);
+    }
+    .document-details-holder {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4vw;
+        margin-top: 12vh;
+        text-align: center;
+        padding: 2vw;
+    }
+    .detail-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 27vw;
+        flex-grow: 0;
+        margin-top: 6vh;
+    }
+    .detail-item::after {
+        display: none;
+    }
+    .item-icon {
+        height: 110px;
+    }
+    .detail-item-name {
+        color: var(--secondaryContrastColor);
+        margin: 4% 0;
+        font-weight: 300;
+    }
+    .detail-item-description {
+        color: var(--serviceDescriptionTextColor);
+        font-weight: 300;
+    }
+
+/* ---------------------------------------------------------------------------------------------------------
+                                
+----------------------------------------------------------------------------------------------------------- */
 }
