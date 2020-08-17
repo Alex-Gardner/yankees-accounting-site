@@ -7,6 +7,12 @@ const serviceHolderBGIMG = document.querySelector('#service-holder-bg-img')
 const serviceItemList = document.querySelectorAll('.service-item')
 
 
+if (pageRoot.classList.contains('dark')) {
+    lightDarkText.innerHTML = "Light"
+} else if (pageRoot.classList.contains('light')) {
+    lightDarkText.innerHTML = "Dark"
+}
+
 function toggleMenuVisible() {
     menuNav.classList.toggle('visible')
 }
