@@ -5,10 +5,14 @@
   box-sizing: border-box;
 }
 
+html {
+    font-size: clamp(14px, calc(3vw + 1vh), 21px);
+}
+
+
 
 body {
     font-family: 'Oswald', sans-serif;
-    font-size: clamp(6px, calc(4vw + 1vh), 25px);
     background-color: #000;
     display: flex;
     justify-content: center;
@@ -193,8 +197,9 @@ body {
 }
 .menu-item a {
     text-decoration: none;
-    font-size: .6em;
+    font-size: .8em;
     color: var(--secondaryContrastColor);
+    font-weight: 200;
 }
 
 
@@ -351,6 +356,10 @@ body {
 .main-page-footer {
     background-color: hsla(216 42% 8% / 100%);
     width: 100%;
+    color: #fff;
+    font-size: .6em;
+    display: flex;
+    justify-content: space-around;
 }
 
 
@@ -437,6 +446,50 @@ body {
                                 
 ----------------------------------------------------------------------------------------------------------- */
 
+
+
+
+/* ---------------------------------------------------------------------------------------------------------
+                                Specialities Page
+----------------------------------------------------------------------------------------------------------- */
+.services-offered {
+    position: relative;
+    background-color: var(--serviceItemOverlayShade);
+    width: clamp(320px, 98vw, 1800px);
+    min-height: 100vh;
+    padding: 0;
+}
+
+.services-hero-holder {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+}
+.services-hero-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.services-list {
+    color: var(--serviceDescriptionTextColor);
+}
+
+.services-list-title {
+    font-size: 1.8em;
+    font-weight: 300;
+    margin-bottom: 2%;
+}
+
+.services-item {
+    margin: 1% 0 0 5%;
+    font-weight: 400;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------
+                                Specialities Page
+----------------------------------------------------------------------------------------------------------- */
 
 @media (min-width: 900px) {
     .site-header {

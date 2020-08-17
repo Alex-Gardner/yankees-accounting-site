@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Yankees Accounting - For Your Accountant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yankees Accounting Inc - For Your Accountant" /> <!-- WIP: UPDATE-->
+    <link rel="icon" href="*icon image URL*" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div id="outer-holder" class="outer-holder dark">
+        <main class="main-content-holder">
+            
+            <header class="site-header">
+
+                <a href="./index.html" class="home-link">
+                    <img src="./assets/sample-icon.svg" alt="" class="company-logo">
+                </a>
+                
+                <button id="light-dark-holder" class="light-dark-holder" onclick="toggleLightDarkMode()"> 
+                    <p class="mode-change-text">
+                        To <span id="light-dark-text" class="light-dark-text">Light</span> Mode
+                    </p>
+                    <svg class="light-dark-mode-arrow" width="20" height="50" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.0607 13.0607C35.6464 12.4749 35.6464 11.5251 35.0607 10.9393L25.5147 1.3934C24.9289 0.807614 23.9792 0.807614 23.3934 1.3934C22.8076 1.97919 22.8076 2.92893 23.3934 3.51472L31.8787 12L23.3934 20.4853C22.8076 21.0711 22.8076 22.0208 23.3934 22.6066C23.9792 23.1924 24.9289 23.1924 25.5147 22.6066L35.0607 13.0607ZM-1.31134e-07 13.5L34 13.5L34 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#FFECC8"/>
+                    </svg>
+                </button>
+
+                <button id="mobile-hamburger-button" class="mobile-hamburger-button" onclick="toggleMenuVisible()">
+                    <img src="./assets/hamburger-svg.svg" alt="" class="hamburger-svg">
+                </button>
+
+                <nav id="menu-holder" class="menu-holder">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="./index.html" class="menu-link">Home</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">About</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="./specialties.html" class="menu-link">Specialties</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="./for-accountant.html" class="menu-link">For Your Accountant</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="services-offered">
+                <div class="services-hero-holder">
+                    <img src="./assets/pexels-oleg-magni-2058147.jpg" alt="" class="services-hero-image">
+                </div>
+                <ul class="services-list">
+                    <h2 class="services-list-title">Servicing clients nationwide, we have been requested to provide:</h2>
+                    <li class="services-item">Monthly Sales & Use Tax Returns</li>
+                    <li class="services-item">Individual & Business Tax Returns</li>
+                    <li class="services-item">Financial Statements</li>
+                    <li class="services-item">Asset Acquisition</li>
+                    <li class="services-item">Retirement Planning</li>
+                    <li class="services-item">Payroll with individual and management's access to portal</li>
+                    <li class="services-item">Monthly & Quarterly Payroll Liability Reports</li>
+                    <li class="services-item">Complete Bookkeeping</li>
+                    <li class="services-item">Guidance in Preparation of Operating Agreements For Your Company</li>
+                    <li class="services-item">Business Formation and Issuance of Shares</li>
+                    <li class="services-item">Managerial Planning and Organization</li>
+                    <li class="services-item">Billing Solutions</li>
+                </ul>
+            </section>
+            
+            <footer class="main-page-footer">
+                <div class="phone-contact"><p class="phone-contact">
+                    Contact Us At: <br> 
+                    (646) 383-3684 <br>
+                    (646) 383 3673
+                </p>
+            </div>
+            </footer>
+        </main>
+    </div>
+    <script async src="main.js"></script>
+</body>
+</html>
