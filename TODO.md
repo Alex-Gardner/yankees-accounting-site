@@ -16,3 +16,5 @@ Have a more info chevron on the services section
 Add padding Right and use a chevron icon somehow 
     - visible on hover on desktop
     - visible permanently on mobile
+
+Checklist for Items on "Preparing Tax Records for Your Accountant?"
