@@ -4,14 +4,19 @@ const pageRoot = document.querySelector('#outer-holder');
 const lightDarkButton = document.querySelector('#light-dark-holder');
 const lightDarkText = document.querySelector('#light-dark-text')
 const serviceHolderBGIMG = document.querySelector('#service-holder-bg-img')
-const serviceItemList = document.querySelectorAll('.service-item')
+const serviceItemList = document.querySelectorAll('.service-item');
 
 
-if (pageRoot.classList.contains('dark')) {
-    lightDarkText.innerHTML = "Light"
-} else if (pageRoot.classList.contains('light')) {
+(function setLightMode() {
     lightDarkText.innerHTML = "Dark"
-}
+    serviceHolderBGIMG.src = './assets/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg'
+})();
+
+// if (pageRoot.classList.contains('dark')) {
+//     lightDarkText.innerHTML = "Light"
+// } else if (pageRoot.classList.contains('light')) {
+//     lightDarkText.innerHTML = "Dark"
+// }
 
 function toggleMenuVisible() {
     menuNav.classList.toggle('visible')
