@@ -56,8 +56,21 @@ body {
     --buttonAccentColor: hsla(0 0% 0% / 100%);
     --buttonArrowAccent: hsla(39 100% 89% / 100%);
     --imageOverlayShade: hsla(0 0% 100% / 80%);
-    --serviceItemOverlayShade: hsla(0 0% 100% / 70%);
+    --serviceItemOverlayShade: hsla(0 0% 100% / 85%);
     --serviceItemShadow: #474747;
+    
+    --testimonial-link-color: hsla(173 100% 27% / 100%);
+    --testimonial-img-overlay: linear-gradient(180deg, rgba(255, 255, 255, .4) 3.16%, rgba(255, 255, 255, .8) 100%);
+    --testimonial-page-title-gradient: radial-gradient(50% 196.96% at 50% 50%, #F2FFF0 0%, #D7FFE2 64.48%, #BEFFE0 98.17%);;
+    --testimonial-title-color: hsla(187 53% 40% / 100%);
+    --testimonial-quote-background: hsla(166 85% 86% / 30%);
+    --testimonial-quote-text-color: hsla(216 64% 21% / 100%);
+    --testimonial-quote-icon-color: hsla(165 33% 62% / 100%);
+    --testimonial-source-text-color: hsla(191 100% 17% / 100%);
+    --testimonial-quote-divider-color: hsla(217 31% 57% / 100%);
+    --testimonial-source-bg-color: hsla(191 100% 81% / 68%);
+    --testimonial-contact-blurb-color: hsla(216 33% 29% / 100%);
+    --testimonial-contact-link-color: hsla(202 100% 40% / 100%);    
 }
 .outer-holder.dark {
     --mainBGColor: hsla(0 0% 9% / 100%);
@@ -79,6 +92,19 @@ body {
     --imageOverlayShade: hsla(0 0% 10% / 90%);
     --serviceItemOverlayShade: hsla(0 0% 0% / 86%);
     --serviceItemShadow: #000;
+
+    --testimonial-link-color: hsla(166 100% 79% / 100%);
+    --testimonial-img-overlay: rgba(0, 6, 10, 0.6);
+    --testimonial-page-title-gradient: radial-gradient(51.27% 113.72% at 50% 50%, #0C1214 0%, #0D2228 100%);
+    --testimonial-title-color: hsla(22 23% 64% / 100%);
+    --testimonial-quote-background: hsla(0 0% 0% / 20%);
+    --testimonial-quote-text-color: hsla(22 21% 52% / 100%);
+    --testimonial-quote-icon-color: hsla(32 55% 68% / 100%);
+    --testimonial-quote-divider-color: hsla(21 23% 64% / 100%);
+    --testimonial-source-text-color: hsla(29 96% 66% / 100%);
+    --testimonial-source-bg-color: hsla(202 100% 13% / 74%);
+    --testimonial-contact-blurb-color: hsla(166 59% 60% / 100%);
+    --testimonial-contact-link-color: hsla(202 100% 40% / 100%);
 }
 
 
@@ -265,6 +291,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 0 7px;   
     margin-bottom: 50px;
     position: relative;
@@ -486,9 +513,11 @@ body {
 }
 
 .services-list-title {
+    color: var(--serviceDescriptionTextColor);
     font-size: 1.8em;
     font-weight: 300;
-    margin-bottom: 2%;
+    margin: 10vh 2vw;
+    text-align: center;
 }
 
 .services-item {
@@ -496,10 +525,138 @@ body {
     font-weight: 400;
 }
 
+/* ---------------------------------------------------------------------------------------------------------
+                                
+----------------------------------------------------------------------------------------------------------- */
+
 
 
 /* ---------------------------------------------------------------------------------------------------------
-                                Specialities Page
+                                For Accountant Page
+----------------------------------------------------------------------------------------------------------- */
+
+/* Non-variable font for testimonials page             */
+.testimonials-content {
+    font-family: 'Questrial', sans-serif;
+}
+.outer-holder.testimonials .testimonial-link {
+    color: var(--testimonial-link-color);
+}
+
+.testimonials-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: lighter;
+    padding: 8vh 0;
+    background: var(--testimonial-page-title-gradient);
+    color: var(--testimonial-title-color);
+
+}
+.outer-quotes-holder {
+    position: relative;
+    background: var(--testimonial-img-overlay);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.testimonials-splash-img-holder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.testimonials-splash-img {
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+}
+.mobile-quote-divider {
+    width: 100%;
+    margin: 50px 0;
+}
+.quotations-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5vh 0;
+}
+.customer-quote {
+    flex-basis: clamp(300px, 33vw, 400px);
+    margin: 0 5vw;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.quote-text-holder {
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+}
+.quote-text {
+    position: relative;
+    background: var(--testimonial-quote-background);
+    padding: 20px;
+    border-radius: 15px;
+    color: var(--testimonial-quote-text-color);
+}
+.open-quote-icon-holder {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+}
+.close-quote-icon-holder {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    bottom: -20px;
+    right: -20px;
+    z-index: -1;
+    transform: rotate(180deg);
+}
+.open-quote-icon-holder svg, .close-quote-icon-holder svg{
+    height: 100%;
+    width: 100%;
+    fill: var(--testimonial-quote-icon-color);
+}
+
+.quote-divider {
+    width: clamp(100px, 10vw, 200px);
+    height: 2px;
+    background-color: var(--testimonial-quote-divider-color);
+    margin: 25px 0;
+}
+.quote-cite p {
+    width: 17ch;
+    text-align: center;
+    font-style: normal;
+    font-size: .8em;
+    padding: 8px 0;
+    color: var(--testimonial-source-text-color);
+    background-color: var(--testimonial-source-bg-color);
+    margin-bottom: 8px;
+    border-radius: 10px;
+}
+
+.call-to-action-message-holder {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 5vw;
+    color: var(--testimonial-contact-blurb-color)
+}
+.cta-closing-line a {
+    color: var(--testimonial-contact-link-color);
+}
+
+/* ---------------------------------------------------------------------------------------------------------
+                                
 ----------------------------------------------------------------------------------------------------------- */
 
 @media (min-width: 900px) {
@@ -667,6 +824,12 @@ body {
         background: linear-gradient(90deg, hsla(0 0% 9% / 89%), hsla(0 0% 9% / 63%));
         width: 400px;
     }
+
+.services-list {
+    columns: 2;
+     -webkit-columns: 2;
+     -moz-columns: 2;
+}   
 /* ---------------------------------------------------------------------------------------------------------
                                 For Accountant Page
 ----------------------------------------------------------------------------------------------------------- */
@@ -718,4 +881,11 @@ body {
 /* ---------------------------------------------------------------------------------------------------------
                                 
 ----------------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------------------------------------
+                                Testimonials Page
+----------------------------------------------------------------------------------------------------------- */
+    .mobile-quote-divider {
+        display: none;
+}
 }

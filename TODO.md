@@ -18,3 +18,15 @@ Add padding Right and use a chevron icon somehow
     - visible permanently on mobile
 
 Checklist for Items on "Preparing Tax Records for Your Accountant?"
+
+
+
+
+
+08/28:
+
+2 Columns on Specialities page
+
+Mobile Divider between quotes (space + line)
+Color scheme for light/dark modes
+Font update
