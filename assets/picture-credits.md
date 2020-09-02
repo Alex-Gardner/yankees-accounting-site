@@ -35,3 +35,9 @@ Photo by Tim Gouw from Pexels
 Photo by Essow Kedelina from Pexels
 
 Photo by Taryn Elliott from Pexels
+
+Photo by Robert Bye on Unsplash
+
+Photo by Anthony DELANOIX on Unsplash
+
+Photo by Matt Lamers on Unsplash

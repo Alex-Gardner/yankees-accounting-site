@@ -4,13 +4,13 @@
     <title>Yankees Accounting - For Your Accountant</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yankees Accounting Inc - Specialties" /> <!-- WIP: UPDATE-->
+    <meta name="description" content="Yankees Accounting Inc - Contact Us" /> <!-- WIP: UPDATE-->
     <link rel="icon" href="*icon image URL*" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-    <div id="outer-holder" class="specialties outer-holder">
+    <div id="outer-holder" class="contact outer-holder">
         <main class="main-content-holder">
             
             <header class="site-header">
@@ -52,25 +52,46 @@
                     </ul>
                 </nav>
             </header>
-            <section class="services-offered">
-                <div class="services-hero-holder">
-                    <img src="./assets/pexels-oleg-magni-2058147.jpg" alt="" class="services-hero-image">
+            <section class="contact-page-base">
+                <h1 class="contact-page-title">Contact Us</h1>
+                <div class="contact-splash-image-holder">
+                    <!-- ./assets/contact-page-mask-dark.png -->
+                    <img src="" alt="" class="contact-splash-image" id="contact-splash-image">
                 </div>
-                <h2 class="services-list-title">Servicing clients nationwide, we have been requested to provide:</h2>
-                <ul class="services-list">
-                    <li class="services-item">Monthly Sales & Use Tax Returns</li>
-                    <li class="services-item">Individual & Business Tax Returns</li>
-                    <li class="services-item">Financial Statements</li>
-                    <li class="services-item">Asset Acquisition</li>
-                    <li class="services-item">Retirement Planning</li>
-                    <li class="services-item">Payroll with individual and management's access to portal</li>
-                    <li class="services-item">Monthly & Quarterly Payroll Liability Reports</li>
-                    <li class="services-item">Complete Bookkeeping</li>
-                    <li class="services-item">Guidance in Preparation of Operating Agreements For Your Company</li>
-                    <li class="services-item">Business Formation and Issuance of Shares</li>
-                    <li class="services-item">Managerial Planning and Organization</li>
-                    <li class="services-item">Billing Solutions</li>
-                </ul>
+                <div class="contact-page-content-holder">
+                    <p class="contact-us-blurb">
+                        We offer a <span>Free</span> initial consultation for new clients. Let us know how we can best serve you.
+                    </p>
+                    <div class="contact-blurb-divider"></div>
+                    <p class="phone-cta">Please give us a call at: (646) 383-3684 or (646) 383-3673</p>
+                    <p class="or-divider-cta">-Or-</p>
+                    <div class="contact-form-message-divider"></div>
+                    <p class="send-message-cta">Send Us A Message:</p>
+                </div>
+
+                <form class="contact-us-form">
+                    <div class="contact-name-holder">
+                        <input class="contact-input" id="contact-form-name" type="text" required>
+                        <label for="contact-form-name">Name</label>
+                    </div>
+
+                    <div class="contact-phone-holder">
+                        <input class="contact-input" id="contact-form-phone-number" type="tel" required>
+                        <label for="contact-form-phone-number">Phone Number</label>
+                    </div>
+
+                    <div class="contact-email-holder">
+                        <input class="contact-input" title="Please enter an email address: e.g. person@example.com" id="contact-form-email" type="text" required>
+                        <label for="contact-form-email">Email</label>
+                    </div>
+
+                    <div class="contact-text-holder">
+                        <textarea class="contact-input" id="contact-form-text-message" name="contact-form-text-message" required></textarea>
+                        <label for="contact-form-text-message">Your Message</label>
+                    </div>
+                    <input type="submit" id="submit-contact" class="contact-submit-button" value="Get In Touch">
+                </form>
+                
             </section>
             
             <footer class="main-page-footer">

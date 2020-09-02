@@ -70,7 +70,10 @@ body {
     --testimonial-quote-divider-color: hsla(217 31% 57% / 100%);
     --testimonial-source-bg-color: hsla(191 100% 81% / 68%);
     --testimonial-contact-blurb-color: hsla(216 33% 29% / 100%);
-    --testimonial-contact-link-color: hsla(202 100% 40% / 100%);    
+    --testimonial-contact-link-color: hsla(202 100% 40% / 100%);  
+    
+    --contact-page-title-color: hsla(0 0% 0% / 41%);
+    --low-contrast-divider-color: hsla(0 0% 92% / 100%);
 }
 .outer-holder.dark {
     --mainBGColor: hsla(0 0% 9% / 100%);
@@ -105,6 +108,9 @@ body {
     --testimonial-source-bg-color: hsla(202 100% 13% / 74%);
     --testimonial-contact-blurb-color: hsla(166 59% 60% / 100%);
     --testimonial-contact-link-color: hsla(202 100% 40% / 100%);
+
+    --contact-page-title-color: hsla(0 0% 100% / 56%);
+    --low-contrast-divider-color: hsla(0 0% 14% / 100%);
 }
 
 
@@ -296,6 +302,7 @@ body {
     margin-bottom: 50px;
     position: relative;
     border-radius: 8px;
+    overflow: hidden;
     box-shadow: 5px 3px 10px -2px #474747;
     flex-basis: 37vw;
 }
@@ -336,7 +343,8 @@ body {
 .service-description {
     color: var(--serviceDescriptionTextColor);
     font-size: .7em;
-    padding: 2% 8% 2% 4%;
+    padding: 2% 2% 2% 4%;
+    margin-right: 10%;
 }
 .proceed-img-holder {
     position: absolute;
@@ -433,11 +441,16 @@ body {
 }
 .document-details-holder {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 4vw;
     margin-top: 12vh;
     text-align: center;
     padding: 2vw;
+}
+.records-blurb {
+    width: 100%;
+    color: var(--serviceDescriptionTextColor);
 }
 .detail-item {
     display: flex;
@@ -457,6 +470,9 @@ body {
     right: 50%;
     transform: translateX(50%);
     background-color: var(--secondaryContrastColor);
+}
+.detail-item ul {
+    margin: 2% 0;
 }
 .detail-item:last-child::after {
     display: none;
@@ -532,7 +548,7 @@ body {
 
 
 /* ---------------------------------------------------------------------------------------------------------
-                                For Accountant Page
+                                Testimonials Page
 ----------------------------------------------------------------------------------------------------------- */
 
 /* Non-variable font for testimonials page             */
@@ -651,6 +667,9 @@ body {
     margin: 5vh 5vw;
     color: var(--testimonial-contact-blurb-color)
 }
+.call-to-action-message-holder div ul {
+    margin: 2vh 0;
+}
 .cta-closing-line a {
     color: var(--testimonial-contact-link-color);
 }
@@ -658,6 +677,154 @@ body {
 /* ---------------------------------------------------------------------------------------------------------
                                 
 ----------------------------------------------------------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------------------------------------------------------
+                                Contact Page
+----------------------------------------------------------------------------------------------------------- */
+
+
+
+.contact-page-base {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.contact-page-title {
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    font-size: 5em;
+    color: var(--contact-page-title-color);
+    top: 50vh;
+    transform: translateY(-50%);
+}
+.contact-splash-image-holder {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contact-splash-image {
+    min-height: 100vh;
+    width: 140%;
+    object-fit: cover;
+}
+.contact-page-content-holder {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-us-blurb {
+
+}
+.contact-us-blurb span {
+    text-transform: uppercase;
+}
+
+.or-divider-cta {
+    text-align: center;
+}
+.contact-form-message-divider {
+    width: 50vw;
+    height: 2px;
+    background-color: var(--low-contrast-divider-color);
+    margin: 25px 0;
+}
+.send-message-cta {
+    text-align: center;
+}
+.contact-us-form {
+    margin-bottom: 5vh;
+}
+.contact-us-form label {
+    font-size: .7em;
+}
+
+.contact-us-form > div {
+    position: relative;
+}
+.contact-us-form > div > label {
+    position: absolute;
+    top: 50%;
+    left: clamp(10px, 2%, 15px);
+    transform: translateY(-50%);
+    transition: all .1s ease-in-out;
+    color: #ADADAD;
+}
+.contact-text-holder > label {
+    top: 33% !important;
+}
+.contact-input:focus + label {
+    transform: translateY(-150%);
+    background-color: hsla(0 0% 100% / 100%);
+    color: hsla(216 78% 44% / 100%);
+    padding: 0 3px;
+}
+.contact-input:valid + label {
+    display: none;
+}
+input:-moz-ui-invalid {
+    box-shadow: none;
+}
+textarea:-moz-ui-invalid {
+    box-shadow: none;
+}
+.contact-input:invalid {
+    outline: none;
+    border: 2px solid hsla(0 0% 82% /100%);
+    border-left: 2px solid hsla(0 100% 80% / 100%);
+}
+.contact-email-holder input:invalid + label {
+    
+    /* transform: translateY(-190%); 
+     color: hsla(0 71% 45% / 100%); */
+}
+
+
+.contact-input {
+    border-radius: 4px;
+    margin: 5% 0;
+    border: 2px solid hsla(0 0% 82% /100%);
+}
+.contact-input:focus {
+    border: 2px solid hsla(216 48% 57% / 100%);
+    outline: hsla(216 48% 57% / 100%);
+    box-shadow: 26px 20px 16px -6px rgba(0 0 0 / 30%);
+}
+.contact-input:not(textarea) {
+    font-size: 1em;
+    height: 3.5ch;
+    line-height: 1;
+}
+textarea.contact-input {
+    height: 10vh;
+    width: 70vw;
+    resize: vertical;
+}
+.contact-submit-button {
+    border: none;
+    font-family: inherit;
+    height: 55px;
+    width: 150px;
+    color: #fff;
+    background-color: hsla(216 75% 36% / 100%);
+}
+/* ---------------------------------------------------------------------------------------------------------
+                                
+----------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* --------------------------------------------------------------- */
 
 @media (min-width: 900px) {
     .site-header {

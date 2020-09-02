@@ -1,3 +1,6 @@
+!!!!!*******: 
+Center finalized navigation header
+
 Update Title, description meta links
 Page Icon
 Properly compress images for size
@@ -30,3 +33,12 @@ Checklist for Items on "Preparing Tax Records for Your Accountant?"
 Mobile Divider between quotes (space + line)
 Color scheme for light/dark modes
 Font update
+
+09/01
+Floating Labels on Contact Form
+Desktop Version of Contact Us Page
+Wire Up form to emit email on submit (re-capcha for verification?)
+
+09/02
+!!!!!! Dark mode Mobile color scheme
+And the above ^

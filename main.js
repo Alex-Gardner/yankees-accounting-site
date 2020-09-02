@@ -6,6 +6,7 @@ const lightDarkText = document.querySelector('#light-dark-text')
 const serviceHolderBGIMG = document.querySelector('#service-holder-bg-img')
 const serviceItemList = document.querySelectorAll('.service-item');
 const testimonialsSplashImg = document.querySelector('#testimonials-splash-img')
+const contentPageSplashImg = document.querySelector('#contact-splash-image');
 
 // Default Mode to saved local storage
 // localStorage.setItem('colorScheme', 'dark')
@@ -31,12 +32,14 @@ function setDefaultMode(modeChoice) {
         lightDarkText.innerHTML = "Dark"
         if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-pixabay-268819.jpg'}
         if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg'}
+        if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-light.png'}
         // serviceHolderBGIMG.src = './assets/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg'
     } else if (colorScheme === 'dark') {
         pageRoot.classList.add('dark')
         lightDarkText.innerHTML = "Light"
         if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-taryn-elliott-4183522.jpg'}
         if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/jamie-street-dO9zecIYnWA-unsplash.jpg'}
+        if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-dark.png'}
         // serviceHolderBGIMG.src = './assets/jamie-street-dO9zecIYnWA-unsplash.jpg'
     }
 })();
@@ -53,7 +56,7 @@ function toggleLightDarkMode() {
         lightDarkText.innerHTML = "Dark"
         if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-pixabay-268819.jpg'}
         if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg'}
-        // serviceHolderBGIMG.src = './assets/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg'        
+        if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-light.png'}               
     }
     else if (pageRoot.classList.contains('light')) {
         setDefaultMode('dark')
@@ -61,7 +64,7 @@ function toggleLightDarkMode() {
         lightDarkText.innerHTML = "Light"
         if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-taryn-elliott-4183522.jpg'}
         if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/jamie-street-dO9zecIYnWA-unsplash.jpg'}
-        // serviceHolderBGIMG.src = './assets/jamie-street-dO9zecIYnWA-unsplash.jpg'
+        if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-dark.png'}        
     }
 }
 
