@@ -8,6 +8,7 @@
     <link rel="icon" href="*icon image URL*" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="main.css" />
 </head>
 <body>
@@ -70,19 +71,19 @@
                     <p class="send-message-cta">Send Us A Message:</p>
                 </div>
 
-                <form class="contact-us-form">
+                <form class="contact-us-form" action="https://formspree.io/xayproke" method="POST">
                     <div class="contact-name-holder">
-                        <input class="contact-input" id="contact-form-name" type="text" required>
-                        <label for="contact-form-name">Name</label>
+                        <input class="contact-input" id="contact-form-name" name="contact-form-name" type="text" required>
+                        <label for="contact-form-name" >Name</label>
                     </div>
 
                     <div class="contact-phone-holder">
-                        <input class="contact-input" id="contact-form-phone-number" type="tel" required>
+                        <input class="contact-input" id="contact-form-phone-number" name="contact-form-phone-number" type="tel" required>
                         <label for="contact-form-phone-number">Phone Number</label>
                     </div>
 
                     <div class="contact-email-holder">
-                        <input class="contact-input" title="Please enter an email address: e.g. person@example.com" id="contact-form-email" type="text" required>
+                        <input class="contact-input" title="Please enter an email address: e.g. person@example.com" id="contact-form-email" name="contact-form-email" type="text" required>
                         <label for="contact-form-email">Email</label>
                     </div>
 
@@ -92,14 +93,69 @@
                     </div>
                     <input type="submit" id="submit-contact" class="contact-submit-button" value="Get In Touch">
                 </form>
+
+                <section class="appointment-info">
+                    <p class="meetings-title">
+                        Meetings Available by Appointment Only
+                    </p>
+
+                    <p class="company-location">
+                        Access Management, Tax & Accounting Cons. LLC <br>
+                        353 West 48th Street, Suite 450 <br>
+                        New York, NY 10036<br>
+                    </p>
+
+                    <p class="company-phone-and-fax">
+                        Telephone: (646) 383-3684 
+                        <br>
+                        Fax: 
+                    </p>
+                </section>
                 
             </section>
             
             <footer class="main-page-footer">
-                <div class="phone-contact"><p class="phone-contact">
+                <div class="get-in-touch-section">
+                    <p class="get-in-touch-text">Get In Touch:</p>
+                    <div class="contact-holder phone-contact-holder">
+                        <div class="icon-image-holder phone-icon-holder">
+                            <img src="./assets/icons/phone-icon.svg" alt="phone icon" class="phone-icon">
+                        </div>
+                        <div class="phone-contacts">
+                            <p class="phone-contact-1">(646) 383-3684</p>
+                            <p class="phone-contact-2">(646) 383-3673</p>
+                        </div>
+
+                    </div>
+                    <div class="contact-holder email-contact-holder">
+                        <div class="icon-image-holder email-icon-holder">
+                            <img src="./assets/icons/email-icon.svg" alt="email icon" class="email-icon">
+                        </div>
+                        <p class="email-contact"><a href="mailto:name@yankeesaccounting.com">name@yksaccting.com</a></p>
+                    </div>
+                </div>
+                <!-- <div class="phone-contact">
+                    <p class="phone-contact">
                     Contact Us At: <br> 
                     (646) 383-3684 <br>
                     (646) 383-3673
+                </p>
+            </div> -->
+            <div class="disclaimer-section">
+                <h4 class="disclaimer-title">
+                    Disclaimer
+                </h4>
+                <p>
+                    This e-mail is covered by the Electronic Communication Privacy Act, 18 U.S.C. Section 2510-2521 and is legally privileged. 
+                </p>
+                <p>
+                    Confidentiality Notice: The information contained in this e-mail is privileged and confidential, and is intended only for the use of the individual or entity to whom it is addressed. If you are not the intended recipient, you are notified that any disclosure,copying, distribution, electronic storage or use of this communication is prohibited. If you received this communication in error, please notify us immediately by e-mail, attaching the original message, and delete the original message from your computer and any network to which your computer is connected.
+                </p>
+                <p>
+                    IRS CIRCULAR 230 DISCLOSURE: To ensure compliance with requirements imposed by the IRS, we wish to inform you that any U.S. tax advice contained in this communication (including any attachments) is not intended or written to be used, and cannot be used, for the purpose of (i) avoiding penalties under the Internal Revenue Code or (ii) promoting, marketing or recommending to another party any matter addressed herein.
+                </p> 
+                <p>
+                    We do not dispense legal advice; please contact your attorney for all matters which appear legal in nature.
                 </p>
             </div>
             </footer>
