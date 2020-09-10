@@ -784,6 +784,7 @@ body {
     color: var(--contact-page-title-color);
     top: 50vh;
     transform: translateY(-50%);
+    font-weight: 300;
 }
 .contact-splash-image-holder {
     min-height: 100vh;
