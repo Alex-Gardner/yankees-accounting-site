@@ -303,7 +303,7 @@ body {
 .company-advertisement-blurb {
     font-size: .8em;
     color: var(--headlineColor);
-    padding: 2% 10%;
+    padding: 1% 10%;
     font-weight: 300;
 }
 .learn-more-button {
@@ -593,6 +593,7 @@ body {
     width: clamp(320px, 98vw, 1800px);
     min-height: 100vh;
     padding: 0;
+    padding-bottom: 4%;
 }
 
 .services-hero-holder {
@@ -607,6 +608,7 @@ body {
 }
 .services-list {
     color: var(--serviceDescriptionTextColor);
+    padding: 0 5%;
 }
 
 .services-list-title {
@@ -618,7 +620,7 @@ body {
 }
 
 .services-item {
-    margin: 1% 0 0 5%;
+    margin: 3% 0 0 5%;
     font-weight: 400;
 }
 
@@ -634,13 +636,14 @@ body {
 
 /* Non-variable font for testimonials page             */
 .testimonials-content {
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 .outer-holder.testimonials .testimonial-link {
     color: var(--testimonial-link-color);
 }
 
 .testimonials-title {
+    font-family: 'Oswald', sans-serif;
     width: 100%;
     text-align: center;
     font-size: 2.5em;
@@ -1115,17 +1118,28 @@ textarea.contact-input {
         color: hsla(187 100% 40% / 100%);
         width: 400px;
     }
+    .services-list-title {
+        font-size: 2.8em;
+    }
+    .services-list {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        padding: 0 8%;
+        font-size: 1.7em;
+    }   
+    .services-item {
+        font-weight: 300;
+        max-width: 35ch;
+    }
+    .services-item::marker {
+        font-size: .7em;
+    }
 
-.services-list {
-    columns: 2;
-     -webkit-columns: 2;
-     -moz-columns: 2;
-}   
-
-.main-page-footer {
-    flex-direction: row;
-    justify-content: space-around;
-}
+    .main-page-footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 /* ---------------------------------------------------------------------------------------------------------
                                 For Accountant Page
 ----------------------------------------------------------------------------------------------------------- */
