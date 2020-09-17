@@ -17,7 +17,7 @@ html {
 
 
 body {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Raleway', sans-serif;
     background-color: #000;
     display: flex;
     justify-content: center;
@@ -30,6 +30,9 @@ body {
     border: 0;
     border-radius: 0;
     background: rgba(255 255 255 / 0);
+}
+button, a {
+    font-family: inherit;
 }
 
 .outer-holder {
@@ -84,6 +87,12 @@ body {
     --contact-desktop-title-color: #3F3F3F;
     --contact-info-color: #949494;
     --contact-info-contrast: #141414;
+
+    --mang-assistance-splash-overlay:   hsla(0 0% 0% / 10%);
+    --mang-assistance-item-color:  #E7E7E7;
+    --bookkeeper-blurb-color: #696969;
+    --bookkeeper-features-title-color: #003B95;
+    --features-item-text-color: #292929;
 }
 .outer-holder.dark {
     --mainBGColor: hsla(0 0% 9% / 100%);
@@ -131,6 +140,12 @@ body {
     --contact-desktop-title-color: #F0F0F0;
     --contact-info-color: #ADADAD;
     --contact-info-contrast: #D9D9D9;
+
+    --mang-assistance-splash-overlay:   hsla(0 0% 0% / 60%);
+    --mang-assistance-item-color:  #ADADAD;
+    --bookkeeper-blurb-color: #696969;
+    --bookkeeper-features-title-color: #B5FFD2;
+    --features-item-text-color: #CFCFCF;
 }
 
 
@@ -256,7 +271,7 @@ body {
     text-decoration: none;
     font-size: .8em;
     color: var(--secondaryContrastColor);
-    font-weight: 200;
+    font-weight: 400;
 }
 
 
@@ -273,6 +288,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: 400;
+}
+.splash-content-holder p  {
+    line-height: 1.4em;;
 }
 .main-image-holder {
     height: 100%;
@@ -291,7 +310,7 @@ body {
     padding: 2%;
     font-weight: 200;
     text-align: center;
-    font-size: 2.4em;
+    font-size: 3.4em;
 }
 
 .accent-divider {
@@ -301,10 +320,10 @@ body {
     background-color: var(--accentColorTinted);
 }
 .company-advertisement-blurb {
-    font-size: .8em;
+    font-size: 1em;
     color: var(--headlineColor);
-    padding: 2% 10%;
-    font-weight: 300;
+    padding: 1% 10%;
+    font-weight: 400;
 }
 .learn-more-button {
     display: none;
@@ -325,6 +344,12 @@ body {
     overflow: hidden;
     box-shadow: 5px 3px 10px -2px #474747;
     flex-basis: 37vw;
+}
+.service-item:nth-child(3) p {
+    border: 2px dotted #f00000;
+}
+.service-item:nth-child(6) p {
+    border: 2px dotted #f00000;
 }
 .service-item::after {
     content: "";
@@ -455,6 +480,7 @@ body {
     object-position: center center;
 }
 .contact-holder {
+    /* font-family: 'Raleway', sans-serif; */
     font-family: 'Quicksand', sans-serif;
     display: flex;
     align-items: center;
@@ -505,7 +531,7 @@ body {
     font-weight: 300;
     text-align: center;
 }
-.sub-header-lighter {
+.for-accountant-sub-header-lighter {
     font-size: 1em;
     font-weight: 300;
     margin-top: 5vh;
@@ -530,7 +556,7 @@ body {
     padding: 2vw;
 }
 .records-blurb {
-    width: 100%;
+    max-width: 100%;
     color: var(--serviceDescriptionTextColor);
 }
 .detail-item {
@@ -593,6 +619,7 @@ body {
     width: clamp(320px, 98vw, 1800px);
     min-height: 100vh;
     padding: 0;
+    padding-bottom: 4%;
 }
 
 .services-hero-holder {
@@ -607,6 +634,7 @@ body {
 }
 .services-list {
     color: var(--serviceDescriptionTextColor);
+    padding: 0 5%;
 }
 
 .services-list-title {
@@ -618,7 +646,7 @@ body {
 }
 
 .services-item {
-    margin: 1% 0 0 5%;
+    margin: 3% 0 0 5%;
     font-weight: 400;
 }
 
@@ -634,7 +662,7 @@ body {
 
 /* Non-variable font for testimonials page             */
 .testimonials-content {
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 .outer-holder.testimonials .testimonial-link {
     color: var(--testimonial-link-color);
@@ -644,6 +672,7 @@ body {
     width: 100%;
     text-align: center;
     font-size: 2.5em;
+    font-weight: 400;
     font-weight: lighter;
     padding: 8vh 0;
     background: var(--testimonial-page-title-gradient);
@@ -685,7 +714,7 @@ body {
 .customer-quote {
     flex-basis: clamp(300px, 33vw, 400px);
     margin: 0 5vw;
-    font-weight: 100;
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -780,7 +809,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     width: 100%;
-    font-size: 5em;
+    font-size: 4.3em;
     color: var(--contact-page-title-color);
     top: 50vh;
     transform: translateY(-50%);
@@ -798,6 +827,7 @@ body {
     object-fit: cover;
 }
 .contact-page-content-holder {
+    font-family: "Quicksand", sans-serif;
     margin: 5%;
     display: flex;
     flex-direction: column;
@@ -941,6 +971,194 @@ textarea.contact-input {
 
 
 
+/* ---------------------------------------------------------------------------------------------------------
+                                Management Assistance Page
+----------------------------------------------------------------------------------------------------------- */
+
+
+.management-page-base {
+    position: relative;
+    padding-bottom: 8%;
+    /* padding: 8% 0; */
+    background-color:  var(--mang-assistance-splash-overlay);
+    width: clamp(300px, 100%, 1800px);
+}
+.mang-assistance-splash-img-holder {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.mang-assistance-splash-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.management-assistance-title {
+    text-align: center;
+    font-weight: 400;
+    font-size: 3em;
+    margin: 10% 0;
+    color: #fff;
+}
+.mang-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 4%;
+}
+.mang-items-upper {
+    
+}
+.mang-items > div {
+    width: 80%;
+}
+.mang-items div:nth-child(1) {
+    align-self: start;
+}
+.mang-items div:nth-child(2) {
+    align-self: end;
+}
+.mang-items-lower {
+    
+}
+.mang-assist-item-container {
+    border-radius: 20px;
+    background-color: hsla(0 0% 0% / 46%);
+    padding: 5% 5% 0;
+    margin: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mang-items h3 {
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: center;
+    color: var(--mang-assistance-item-color);
+}
+.checkmark-svg {
+    height: 30px;
+    width: 45px;
+    margin: 10px 0;
+}
+
+
+/* ----------------------------------- */
+
+.bookkeeper-info {
+    position: relative;
+    margin-top: 50px;
+}
+
+.bookkeeper-logo-holder {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    width: clamp(240px, 65%, 690px);
+    height: auto;
+    z-index: 0;
+}
+.bookkeeper-logo {
+    /* padding: 1%; */
+    width: 100%;
+    height: auto;
+}
+.bookkeeper-title {
+    font-size: 2.2em;
+    font-weight: 500;
+    margin: 23% 0 0 5%;
+    max-width: 78%;
+}
+.spacer-vertical-1 {
+    /* height: clamp(36px, 20px + 32vw, 226px); */
+    height: clamp(36px, calc(232*(638px - 100vw)), 20px + 32vw);  /*Magic Number for where Dedicated Bookkeeper title becomes one line*/
+}
+.bookkeeper-blurb-holder {
+    margin-left: 5%;
+    /* max-width: min(500px, max((calc(400*(620px - 100vw))), 400px)); */
+    max-width: clamp(400px, calc(400*(640px - 100vw)), 500px); /*Magic Number for where Dedicated Bookkeeper title becomes one line*/
+}
+.bookkeeper-blurb {
+    color: var(--bookkeeper-blurb-color);
+}
+.spacer-vertical-2 {
+    /* height: 40px; */
+    /* height: clamp(40px, calc(40*(100vw - 636px)), 450px) */
+    height: clamp(40px, calc(40*(100vw - 633px)), 180px + 20vw);
+}
+
+.bookkeeper-features-holder {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 16%;
+    max-width: min(70%, 745px);
+}
+
+.bookkeeper-features-title {
+    text-align: center;
+    margin: 0 0 5% 0;
+    font-size: 2em;
+    font-weight: 500;
+    color: var(--bookkeeper-features-title-color);
+}
+.bookkeeper-features-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.3em;
+}
+.bookkeeper-feature-item {
+    /* max-width: clamp(200px, 40%, 470px); */
+    margin: 11% 0;
+    flex-basis: 274px;
+    color: var(--features-item-text-color);
+}
+.feature-emphasis {
+    font-weight: 700;
+}
+.no-surprise-statement-holder {
+    margin: 8%;
+}
+.no-surprise-statement {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 400;
+}
+@media (min-width: 720px) {
+    .bookkeeper-features-title {
+        text-align: left;
+    }
+}
+.bookkeeper-feature-item:nth-child(1) span {
+    color: #00FDA4;
+    border: 2px dotted #F00000;
+}
+.bookkeeper-feature-item:nth-child(2) span {
+    color: #5ED7DF;
+}
+.bookkeeper-feature-item:nth-child(3) span {
+    color: #48B2FF;
+}
+.bookkeeper-feature-item:nth-child(4) span {
+    color: #6889FF;
+    border: 2px dotted #F00000;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------
+                                
+----------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
 
 
 /* --------------------------------------------------------------- */
@@ -961,6 +1179,7 @@ textarea.contact-input {
         position: static;
         padding: 0;
         font-size: 1em;
+        font-weight: 300;
     }
     .menu-item {
         margin: 0 20px;
@@ -1027,7 +1246,7 @@ textarea.contact-input {
         flex-basis: 60%;
         height: 100%;
         font-size: 1.4em;
-        font-family: 'Oswald', sans-serif;
+        /* font-family: 'Oswald', sans-serif; */
         text-align: center;
     }
     .learn-more-text a {
@@ -1082,7 +1301,8 @@ textarea.contact-input {
     }
     .service-item:hover {
         border-radius: 20px;
-        box-shadow: 15px 10px 20px 5px var(--serviceItemShadow);
+        /* box-shadow: 15px 10px 20px 5px var(--serviceItemShadow); */
+        box-shadow: 26px 16px 34px 1px var(--serviceItemShadow);
     }
     .service-item:hover .proceed-img-holder {
         display: flex;
@@ -1115,17 +1335,29 @@ textarea.contact-input {
         color: hsla(187 100% 40% / 100%);
         width: 400px;
     }
+    .services-list-title {
+        font-size: 2.8em;
+        font-weight: 400;
+    }
+    .services-list {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        padding: 0 8%;
+        font-size: 1.5em;
+    }   
+    .services-item {
+        font-weight: 300;
+        max-width: 35ch;
+    }
+    .services-item::marker {
+        font-size: .7em;
+    }
 
-.services-list {
-    columns: 2;
-     -webkit-columns: 2;
-     -moz-columns: 2;
-}   
-
-.main-page-footer {
-    flex-direction: row;
-    justify-content: space-around;
-}
+    .main-page-footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 /* ---------------------------------------------------------------------------------------------------------
                                 For Accountant Page
 ----------------------------------------------------------------------------------------------------------- */
@@ -1136,11 +1368,14 @@ textarea.contact-input {
         font-weight: 300;
         text-align: center;
     }
-    .sub-header-lighter {
+    .for-accountant-sub-header-lighter {
         font-size: 1em;
-        font-weight: 300;
+        font-weight: 400;
         margin-top: 5vh;
         color: var(--serviceDescriptionTextColor);
+    }
+    .records-blurb {
+        margin: 0 25%;
     }
     .document-details-holder {
         display: flex;
@@ -1272,7 +1507,134 @@ textarea.contact-input {
         width: 35vw;
     }
 
+
+
+/* ---------------------------------------------------------------------------------------------------------
+                                Management Assistance Page
+----------------------------------------------------------------------------------------------------------- */
+    .mang-items {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+        width: auto;
+        max-width: 98vw;
+    }
+    .mang-items-upper {
+        margin-right: 13vw;
+    }
+    .mang-items-lower {
+        margin-left: 13vw;
+    }
+    .mang-items > div {
+        /* flex-direction: row; */
+        flex-basis: 400px;
+        padding: 0;
+        padding-top: 2%;
+    }
+    .mang-assist-item-container {
+        opacity: 0;
+        margin: 1% 0;
+    }
+    .mang-items-upper div:nth-child(1) {
+        animation: 1s ease-in .1s 1 forwards fadeIn;
+        -webkit-animation: 1s ease-in .5s 1 forwards fadeIn;
+        -moz-animation: 1s ease-in .5s 1 forwards fadeIn;
+    }
+    .mang-items-upper div:nth-child(2) {
+        animation: 1s ease-in 2.5s 1 forwards fadeIn;
+        -webkit-animation: 1s ease-in 2.5s 1 forwards fadeIn;
+        -moz-animation: 1s ease-in 2.5s 1 forwards fadeIn;
+    }
+    .mang-items-lower div:nth-child(1) {
+        animation: 1s ease-in 1.5s 1 forwards fadeIn;
+        -webkit-animation: 1s ease-in 1.5s 1 forwards fadeIn;
+        -moz-animation: 1s ease-in 1.5s 1 forwards fadeIn;
+    }
+    .mang-items-lower div:nth-child(2) {
+        animation: 1s ease-in 3.5s 1 forwards fadeIn;
+        -webkit-animation: 1s ease-in 3.5s 1 forwards fadeIn;
+        -moz-animation: 1s ease-in 3.5s 1 forwards fadeIn;
+    }
+    
+    /* .bookkeeper-logo *:hover {
+        filter: drop-shadow(0 0 1em);
+    } */
+    .bookkeeper-logo * {
+        color: #CCFFED;
+        filter: none;
+        transform: scale(1);
+        transform-origin: center;
+        transition: filter .4s, transform .2s;
+    }
+    .bookkeeper-logo:hover * {
+        filter: drop-shadow(0 0 .7em);
+        transform: scale(1.01);
+    }
+    
+    .bookkeeper-logo:hover *:nth-child(1) {
+        color: #CCFFED;
+        transition-delay:  0s;
+    }
+    .bookkeeper-logo:hover *:nth-child(2) {
+        color: #A8FFEF;
+        transition-delay: .2s;
+    }
+    .bookkeeper-logo:hover *:nth-child(3) {
+        color: #84F8FF;
+        transition-delay: .4s;
+    }
+    .bookkeeper-logo:hover *:nth-child(4) {
+        color: #63E2FE;
+        transition-delay: .6s;
+    }
+    .bookkeeper-logo:hover *:nth-child(5) {
+        color: #63C6FE;
+        transition-delay: .8s;
+    }
+    .bookkeeper-logo:hover *:nth-child(6) {
+        color: #48B2FF;
+        transition-delay: 1s;
+    }
+
+
+    
+
+    .spacer-vertical-2 {
+        height: clamp(361px, 40vw, 402px);
+    }
+    .bookkeeper-features-holder {
+        margin: 0 auto;
+        max-width: min(80%, 815px);
+    }
+    .bookkeeper-features-items {
+        /* flex-wrap: nowrap; */
+    }
+    .no-surprise-statement-holder {
+        margin: 3%;
+    }
+
 /* ---------------------------------------------------------------------------------------------------------
                         
 ----------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------
+                        
+----------------------------------------------------------------------------------------------------------- */
+}
+
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

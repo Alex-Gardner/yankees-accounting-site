@@ -8,6 +8,11 @@ const serviceItemList = document.querySelectorAll('.service-item');
 const testimonialsSplashImg = document.querySelector('#testimonials-splash-img')
 const contentPageSplashImg = document.querySelector('#contact-splash-image');
 
+
+const smallTriangle = document.querySelector('#small-svg-triangle');
+
+console.log(smallTriangle)
+
 // Default Mode to saved local storage
 // localStorage.setItem('colorScheme', 'dark')
 
