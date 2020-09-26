@@ -7,7 +7,8 @@ const serviceHolderBGIMG = document.querySelector('#service-holder-bg-img')
 const serviceItemList = document.querySelectorAll('.service-item');
 const testimonialsSplashImg = document.querySelector('#testimonials-splash-img')
 const contentPageSplashImg = document.querySelector('#contact-splash-image');
-
+const bizAcquisitionSplashImg = document.querySelector('#purchase-sales-biz-acq-dec-img')
+const slideInItems = document.querySelectorAll('.slide-right, .slide-left')
 
 const smallTriangle = document.querySelector('#small-svg-triangle');
 
@@ -38,14 +39,14 @@ function setDefaultMode(modeChoice) {
         if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-pixabay-268819.jpg'}
         if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg'}
         if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-light.png'}
-        // serviceHolderBGIMG.src = './assets/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg'
+        if (!bizAcquisitionSplashImg) {} else {bizAcquisitionSplashImg.src = './assets/micheile-henderson-lZ_4nPFKcV8-unsplash.jpg'}
     } else if (colorScheme === 'dark') {
         pageRoot.classList.add('dark')
         lightDarkText.innerHTML = "Light"
         if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-taryn-elliott-4183522.jpg'}
         if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/jamie-street-dO9zecIYnWA-unsplash.jpg'}
         if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-dark.png'}
-        // serviceHolderBGIMG.src = './assets/jamie-street-dO9zecIYnWA-unsplash.jpg'
+        if (!bizAcquisitionSplashImg) {} else {bizAcquisitionSplashImg.src = './assets/william-daigneault-oWrZoAVOBS0-unsplash.jpg'}
     }
 })();
         
@@ -62,6 +63,7 @@ function toggleLightDarkMode() {
         if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-pixabay-268819.jpg'}
         if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg'}
         if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-light.png'}               
+        if (!bizAcquisitionSplashImg) {} else {bizAcquisitionSplashImg.src = './assets/micheile-henderson-lZ_4nPFKcV8-unsplash.jpg'}               
     }
     else if (pageRoot.classList.contains('light')) {
         setDefaultMode('dark')
@@ -70,10 +72,31 @@ function toggleLightDarkMode() {
         if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-taryn-elliott-4183522.jpg'}
         if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/jamie-street-dO9zecIYnWA-unsplash.jpg'}
         if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-dark.png'}        
+        if (!bizAcquisitionSplashImg) {} else {bizAcquisitionSplashImg.src = './assets/william-daigneault-oWrZoAVOBS0-unsplash.jpg'}        
     }
 }
 
 // ---------------------------------------------
+
+(function applySlideAnimations() {
+    if (!slideInItems) {return}
+    const slideInOptions = {
+        threshold: .8
+    };
+    const slideInOberver = new IntersectionObserver (function(entries, slideInOberver) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {return}
+            else {
+                entry.target.classList.add('appear');
+                slideInOberver.unobserve(entry.target);
+            }
+        })
+    }, slideInOptions)
+
+    slideInItems.forEach(item => {
+        slideInOberver.observe(item)
+    })
+})();
 
 
 serviceItemList.forEach(serviceItem => {

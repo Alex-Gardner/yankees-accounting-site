@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Yankees Accounting - Purchasing and Sales Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yankees Accounting Inc - Purchasing and Sales" /> <!-- WIP: UPDATE-->
+    <link rel="icon" href="*icon image URL*" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div id="outer-holder" class="specialties outer-holder">
+        <main class="main-content-holder">
+            
+            <header class="site-header">
+
+                <a href="./index.html" class="home-link">
+                    <img src="./assets/sample-icon.svg" alt="" class="company-logo">
+                </a>
+                
+                <button id="light-dark-holder" class="light-dark-holder" onclick="toggleLightDarkMode()"> 
+                    <p class="mode-change-text">
+                        To <span id="light-dark-text" class="light-dark-text">Light</span> Mode
+                    </p>
+                    <svg class="light-dark-mode-arrow" width="20" height="50" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.0607 13.0607C35.6464 12.4749 35.6464 11.5251 35.0607 10.9393L25.5147 1.3934C24.9289 0.807614 23.9792 0.807614 23.3934 1.3934C22.8076 1.97919 22.8076 2.92893 23.3934 3.51472L31.8787 12L23.3934 20.4853C22.8076 21.0711 22.8076 22.0208 23.3934 22.6066C23.9792 23.1924 24.9289 23.1924 25.5147 22.6066L35.0607 13.0607ZM-1.31134e-07 13.5L34 13.5L34 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#FFECC8"/>
+                    </svg>
+                </button>
+
+                <button id="mobile-hamburger-button" class="mobile-hamburger-button" onclick="toggleMenuVisible()">
+                    <img src="./assets/hamburger-svg.svg" alt="" class="hamburger-svg">
+                </button>
+
+                <nav id="menu-holder" class="menu-holder">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="./index.html" class="menu-link">Home</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="./testimonials.html" class="menu-link">Testimonials</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="./specialties.html" class="menu-link">Specialties</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="./for-accountant.html" class="menu-link">For Your Accountant</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="./contact.html" class="menu-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+
+            <main class="purchase-sales-main-page-content">
+                <section class="purchase-sales-section-holder purchase-sales-splash-holder">
+                    <div class="purchase-sales-splash-img-holder img-parallax">
+                        <!-- <img src="./assets/andrik-langfield-EzNY6jUn4mk-unsplash.jpg" alt="" class="purchase-sales-splash-hero-img"> -->
+                    </div>
+                    <div class="purchase-sales-spacer-1"></div>
+                    <h1 class="purchase-sales-title">Purchasing and Sales</h1>
+                    <div class="purchase-sales-spacer-2"></div>
+                    <p class="purchase-sales-splash-blurb">
+                        You know how frustrating it can be to dedicate time and resources on non-revenue-generating activities. Here at Yankees Accounting, we chart a path for your company to acquire the assets your business can use to grow. 
+                    </p>
+                </section>
+                <div class="purchase-sales-spacer-between-sections"></div>
+
+                <section class="purchase-sales-section-holder purchase-sales-sourcing-holder">
+                    <div class="purchase-sales-text-holder purchase-sales-sourcing-text-holder slide-right">
+                        <h2 class="purchase-sales-sourcing-title">Sourcing</h2>
+                        <div class="purchase-sales-section-title-spacer"></div>
+                        <ul class="sourcing-list">
+                                <li class="sourcing-item">
+                                    Trained professionals procure necessary equipment for your business 
+                                </li>
+                                <li class="sourcing-item">
+                                    Selection of best assets for your usage - including machinery, motor vehicles, and office supplies
+                                </li>
+                        </ul>
+                    </div>
+                    <img src="./assets/chuttersnap-BNBA1h-NgdY-unsplash.jpg" alt="" class="purchase-sales-sourcing-dec-img slide-left">
+
+                </section>
+                <div class="purchase-sales-spacer-between-sections"></div>
+
+                <section class="purchase-sales-section-holder purchase-sales-business-acq-holder">
+                    <!-- ./assets/william-daigneault-oWrZoAVOBS0-unsplash.jpg -->
+                    <img src="" alt="" class="purchase-sales-biz-acq-dec-img slide-right" id="purchase-sales-biz-acq-dec-img">
+                    <div class="purchase-sales-text-holder purchase-sales-biz-acq-text-holder slide-left">
+                        <h2 class="purchase-sales-biz-acq-title">
+                            Business Acquisitions
+                        </h2>
+                        <div class="purchase-sales-section-title-spacer"></div>
+                        <p class="purchase-sales-biz-acq-lead-para">At times the most profitable asset to purchase is a well-vetted, currently operational business.</p>
+                        <p>
+                            At Yankees Accounting, we: 
+                        </p>
+                        <ul class="biz-acq-blurb-list">
+                            <li>
+                                Analyze your choice of business
+                            </li>
+                            <li>
+                                Select the best option from available opportunities                                
+                            </li>
+                            <li>
+                                Report on prospective cash flow after closing                                
+                            </li>
+                        </ul>
+                        <p class="biz-acq-final-note">
+                            Note: We do not list businesses and do not profit from channeling you to the most expensive arrangement.
+                        </p>
+                    </div>
+
+                </section>
+                <div class="purchase-sales-spacer-between-sections"></div>
+
+                <section class="purchase-sales-section-holder purchase-sales-business-sales-holder">
+                    <div class="purchase-sales-text-holder purchase-sales-biz-sales-text-holder slide-right" id="purchase-sales-biz-sales-text-holder">
+                        <h2 class="purchase-sales-biz-sales-title">
+                            Sale of Business
+                        </h2>
+                        <div class="purchase-sales-section-title-spacer"></div>
+                        <p class="purchase-sales-biz-sales-blurb">
+                            When <span>you</span> wish to sell, we calculate your optimum price and actively negotiate for your finest terms of sale.
+                        </p>
+                    </div>
+                    <img src="./assets/victoria-wendish-A8SZbSEmbyo-unsplash-mask.png" alt="" class="purchase-sales-biz-sales-img slide-left" id="purchase-sales-biz-sales-img">
+                </section>
+                <!-- <div class="purchase-sales-spacer-between-sections"></div> -->
+            </main>
+
+            
+            <footer class="main-page-footer">
+                <div class="get-in-touch-section">
+                    <p class="get-in-touch-text">Get In Touch:</p>
+                    <div class="contact-holder phone-contact-holder">
+                        <div class="icon-image-holder phone-icon-holder">
+                            <img src="./assets/icons/phone-icon.svg" alt="phone icon" class="phone-icon">
+                        </div>
+                        <div class="phone-contacts">
+                            <p class="phone-contact-1">(646) 383-3684</p>
+                            <p class="phone-contact-2">(646) 383-3673</p>
+                        </div>
+
+                    </div>
+                    <div class="contact-holder email-contact-holder">
+                        <div class="icon-image-holder email-icon-holder">
+                            <img src="./assets/icons/email-icon.svg" alt="email icon" class="email-icon">
+                        </div>
+                        <p class="email-contact"><a href="mailto:name@yankeesaccounting.com">name@yksaccting.com</a></p>
+                    </div>
+                </div>
+                
+            </footer>
+        </main>
+    </div>
+    <script async src="main.js"></script>
+</body>
+</html>

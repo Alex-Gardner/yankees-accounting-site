@@ -17,7 +17,7 @@ html {
 
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', 'Arial', sans-serif;
     background-color: #000;
     display: flex;
     justify-content: center;
@@ -93,6 +93,9 @@ button, a {
     --bookkeeper-blurb-color: #696969;
     --bookkeeper-features-title-color: #003B95;
     --features-item-text-color: #292929;
+
+    --purchase-sales-splash-overlay-shade: hsla(0 0% 100% / 60%);
+    --purchase-sales-splash-text-color: #313131;
 }
 .outer-holder.dark {
     --mainBGColor: hsla(0 0% 9% / 100%);
@@ -146,6 +149,9 @@ button, a {
     --bookkeeper-blurb-color: #696969;
     --bookkeeper-features-title-color: #B5FFD2;
     --features-item-text-color: #CFCFCF;
+
+    --purchase-sales-splash-overlay-shade: hsla(0 0% 0% / 53%);
+    --purchase-sales-splash-text-color: #f2f2f2;
 }
 
 
@@ -345,12 +351,10 @@ button, a {
     box-shadow: 5px 3px 10px -2px #474747;
     flex-basis: 37vw;
 }
-.service-item:nth-child(3) p {
+.warning-notice {
     border: 2px dotted #f00000;
 }
-.service-item:nth-child(6) p {
-    border: 2px dotted #f00000;
-}
+
 .service-item::after {
     content: "";
     position: absolute;
@@ -444,7 +448,7 @@ button, a {
 ---------------- */
 
 .main-page-footer {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', 'Arial', sans-serif;
     background-color: hsla(216 42% 8% / 100%);
     width: 100%;
     color: #fff;
@@ -590,7 +594,7 @@ button, a {
 .detail-item-name {
     color: var(--secondaryContrastColor);
     margin: 4% 0;
-    font-weight: 300;
+    font-weight: 400;
 }
 .detail-item-description {
     color: var(--serviceDescriptionTextColor);
@@ -673,7 +677,7 @@ button, a {
     text-align: center;
     font-size: 2.5em;
     font-weight: 400;
-    font-weight: lighter;
+    /* font-weight: lighter; */
     padding: 8vh 0;
     background: var(--testimonial-page-title-gradient);
     color: var(--testimonial-title-color);
@@ -1135,7 +1139,6 @@ textarea.contact-input {
 }
 .bookkeeper-feature-item:nth-child(1) span {
     color: #00FDA4;
-    border: 2px dotted #F00000;
 }
 .bookkeeper-feature-item:nth-child(2) span {
     color: #5ED7DF;
@@ -1145,7 +1148,6 @@ textarea.contact-input {
 }
 .bookkeeper-feature-item:nth-child(4) span {
     color: #6889FF;
-    border: 2px dotted #F00000;
 }
 
 
@@ -1154,9 +1156,124 @@ textarea.contact-input {
 ----------------------------------------------------------------------------------------------------------- */
 
 
+/* ---------------------------------------------------------------------------------------------------------
+                                        Purchasing and Sales Page
+----------------------------------------------------------------------------------------------------------- */
+.purchase-sales-section-holder {
+    min-height: 70vh;
+}
+.purchase-sales-title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.7em;
+}
+.purchase-sales-spacer-1 {
+    width: 100%;
+    height: 10vh;
+}
+.purchase-sales-spacer-2 {
+    width: 100%;
+    height: 15vh;
+}
+.purchase-sales-spacer-between-sections {
+    width: 100%;
+    height: 10vh;
+}
+
+.purchase-sales-splash-holder {
+    position: relative;
+    background-color: var(--purchase-sales-splash-overlay-shade);
+}
+.purchase-sales-splash-holder p {
+    color: var(--purchase-sales-splash-text-color);
+    font-weight: 500;
+}
+
+.purchase-sales-splash-img-holder {
+    /* top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: url(./assets/andrik-langfield-EzNY6jUn4mk-unsplash.jpg);
+    background-attachment: fixed;
+    background-size: 100% 82%;
+    background-position: 0% 0%;
+}
+.purchase-sales-splash-hero-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.purchase-sales-splash-blurb {
+    max-width: max(80vw, 300px);
+    padding-left: 5%;
+}
+section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) {
+    position: relative;
+    /* background-color: hsla(0 0% 0% / 80%); */
+    background-color: var(--serviceItemOverlayShade);
+    padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    color: var(--serviceDescriptionTextColor);
+}
+section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    top: 0;
+}
+#purchase-sales-biz-sales-img {
+    height: 98%;
+    width: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.purchase-sales-text-holder {
+    width: 100%;
+    padding: 0 3%;
+}
+.purchase-sales-text-holder > h2 {
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: 400;
+}
+/* .purchase-sales-sourcing-text-holder h2 {
+    color: #814BA3;
+}
+.purchase-sales-biz-sales-text-holder h2 {
+    color: #8D763A;
+} */
+.purchase-sales-text-holder h2 {
+    color: #4EAED7;
+}
+.purchase-sales-text-holder > p, .purchase-sales-text-holder > ul {
+    font-size: 1.2em;
+    line-height: 1.2;
+    margin-bottom: 5%;
+}
+.purchase-sales-text-holder li {
+    margin-bottom: 5%;
+}
+.purchase-sales-section-title-spacer {
+    width: 100%;
+    height: 8vmax;
+}
 
 
-
+.purchase-sales-biz-sales-blurb span {
+    font-weight: 600;
+}
+/* ---------------------------------------------------------------------------------------------------------
+                                
+----------------------------------------------------------------------------------------------------------- */
 
 
 
@@ -1402,7 +1519,6 @@ textarea.contact-input {
     .detail-item-name {
         color: var(--secondaryContrastColor);
         margin: 4% 0;
-        font-weight: 300;
     }
     .detail-item-description {
         color: var(--serviceDescriptionTextColor);
@@ -1618,13 +1734,173 @@ textarea.contact-input {
 ----------------------------------------------------------------------------------------------------------- */
 
 
-
-
-
-
 /* ---------------------------------------------------------------------------------------------------------
-                        
+                                        Purchasing and Sales Page
 ----------------------------------------------------------------------------------------------------------- */
+.purchase-sales-main-page-content {
+    overflow: hidden;
+}
+.purchase-sales-section-holder {
+    min-height: 70vh;
+}
+.purchase-sales-title {
+    text-align: start;
+    margin-left: 5%;
+    font-weight: 500;
+    font-size: 2.7em;
+    opacity: 0;
+    transform: translate(-10%);
+    animation: 1s ease-in 0s 1 forwards fadeIn, .5s ease-in 0s 1 forwards slideRight;
+    -webkit-animation: 1s ease-in 0s 1 forwards fadeIn, .5s ease-in 0s 1 forwards slideRight;
+    -moz-animation: 1s ease-in 0s 1 forwards fadeIn, .5s ease-in 0s 1 forwards slideRight;
+}
+.purchase-sales-spacer-1 {
+    width: 100%;
+    height: 10vh;
+}
+.purchase-sales-spacer-2 {
+    width: 100%;
+    height: 15vh;
+}
+.purchase-sales-spacer-between-sections {
+    width: 100%;
+    height: 10vh;
+}
+
+.purchase-sales-splash-holder {
+    min-height: 75vh;
+    position: relative;
+    background-color: var(--purchase-sales-splash-overlay-shade);
+}
+.purchase-sales-splash-holder p {
+    color: var(--purchase-sales-splash-text-color);
+    font-weight: 500;
+    max-width: 50vw;
+    opacity: 0;
+    transform: translate(0, 10%);
+    animation: 1s ease-in 0s 1 forwards fadeIn, .5s ease-in 0s 1 forwards slideUp;
+    -webkit-animation: 1s ease-in 0s 1 forwards fadeIn, .5s ease-in 0s 1 forwards slideUp;
+    -moz-animation: 1s ease-in 0s 1 forwards fadeIn, .5s ease-in 0s 1 forwards slideUp;
+}
+
+.purchase-sales-splash-blurb {
+    padding-left: 8%;
+}
+
+.purchase-sales-splash-img-holder {
+    /* top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: url(./assets/andrik-langfield-EzNY6jUn4mk-unsplash.jpg);
+    background-attachment: fixed;
+    background-size: 100% 82%;
+    background-position: 0% 0%;
+}
+.purchase-sales-splash-hero-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) {
+    position: relative;
+    /* background-color: hsla(0 0% 0% / 80%); */
+    background-color: rgba(0 0 0 / 0%);
+    padding: 0 3vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--serviceDescriptionTextColor);
+}
+section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
+    position: static;
+    height: 90%;
+    width: 50%;
+    z-index: auto;
+    object-fit: cover;
+    border-radius: 2vw;
+}
+.purchase-sales-text-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: unset;
+    flex-basis: 40%;
+    flex-grow: 1;
+}
+
+#purchase-sales-biz-sales-img {
+    object-fit: fill;
+    height: auto;
+    width: 30vw;
+    /* width: 25%; */
+    transform: translate(0, 0);
+}
+.purchase-sales-business-sales-holder {
+    justify-content: space-between;
+}
+#purchase-sales-biz-sales-text-holder {
+    flex-grow: 0;
+    padding: 0 3%;
+}
+
+.purchase-sales-text-holder > h2 {
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: 400;
+}
+/* .purchase-sales-sourcing-text-holder h2 {
+    color: #814BA3;
+}
+.purchase-sales-biz-sales-text-holder h2 {
+    color: #8D763A;
+} */
+.purchase-sales-text-holder h2 {
+    color: #4EAED7;
+}
+.purchase-sales-text-holder > p, .purchase-sales-text-holder > ul {
+    font-size: 1.2em;
+    line-height: 1.2;
+    margin-bottom: 5%;
+}
+.purchase-sales-text-holder li {
+    margin-bottom: 5%;
+}
+.purchase-sales-section-title-spacer {
+    width: 100%;
+    height: 5vmax;
+}
+
+.purchase-sales-biz-sales-blurb span {
+    font-weight: 600;
+}
+
+.slide-left, .slide-right {
+    opacity: 0;
+    transition: opacity .7s ease-out 0s, transform .7s ease-out 0s;
+}
+.slide-left {
+    transform: translate(10%);
+}
+.slide-right {
+    transform: translate(-10%);
+}
+.slide-left.appear, .slide-right.appear {
+    opacity: 1;
+    transform: translate(0);
+}
+/* ---------------------------------------------------------------------------------------------------------
+                                
+----------------------------------------------------------------------------------------------------------- */
+
+
+
+
 }
 
 
@@ -1637,4 +1913,20 @@ textarea.contact-input {
     100% {
         opacity: 1;
     }
+}
+@keyframes slideRight {
+    0% {
+        transform: translate(-10%);
+    }
+    100% {
+        transform: translate(0%);
+    }    
+}
+@keyframes slideUp {
+    0% {
+        transform: translate(0, 10%);
+    }
+    100% {
+        transform: translate(0, 0%);
+    }    
 }
