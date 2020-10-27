@@ -42,3 +42,9 @@ Wire Up form to emit email on submit (re-capcha for verification?)
 09/02
 !!!!!! Dark mode Mobile color scheme
 And the above ^
+
+
+HR PAGE
+Animation Timing function
+Mobile Layout
+Page Title 

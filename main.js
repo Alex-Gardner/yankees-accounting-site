@@ -105,3 +105,37 @@ serviceItemList.forEach(serviceItem => {
     proceedLinkHolder.innerHTML = '<img src="./assets/next-chevron.svg" alt="go to page">' 
     serviceItem.appendChild(proceedLinkHolder)
 })
+
+// ----------------- HR Page ------------------------------
+const hrButtonIcons = document.querySelectorAll('.hr-movable-icon');
+const hrPageMainSection = document.querySelector('#hr-information-content-holder')
+const hrIconsButton = document.querySelector('#hr-movable-icons-btn');
+const svgHROfficeHolder = document.querySelector('#svg-office-holder');
+
+if (hrButtonIcons) {
+    let currentStation = 0;
+    let clickCounter = 0;
+    function changeHRIconStation() {
+        clickCounter++;
+        hrPageMainSection.classList.replace(`hr-station-${currentStation }`, `hr-station-${(currentStation + 1) % 4}`);
+        currentStation = (currentStation + 1) % 4;
+    }
+    function visibleHRWorkers() {
+        if (svgHROfficeHolder.classList.contains('holder-hidden')) {
+            svgHROfficeHolder.classList.replace('holder-hidden', 'visible-state')
+        }
+    }
+    function fadeInPersonSVG() {
+        if (clickCounter <= 4) {
+            svgHROfficeHolder.classList.add(`office-holder-click-${clickCounter}`)
+        }
+    }
+    function changeHRState() {
+        changeHRIconStation();
+        visibleHRWorkers();
+        fadeInPersonSVG();
+    }
+    hrIconsButton.onclick = changeHRState;
+    // on button click, advance station - (currentstation +1) % 4
+    // replace currentStation className with currentStation's className
+}
