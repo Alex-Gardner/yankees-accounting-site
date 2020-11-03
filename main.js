@@ -130,10 +130,16 @@ if (hrButtonIcons) {
             svgHROfficeHolder.classList.add(`office-holder-click-${clickCounter}`)
         }
     }
+    function stopButtonGlow() {
+        if (clickCounter >= 3) {
+            hrIconsButton.classList.remove('dancing-shadow')
+        }
+    }
     function changeHRState() {
         changeHRIconStation();
         visibleHRWorkers();
         fadeInPersonSVG();
+        stopButtonGlow();
     }
     hrIconsButton.onclick = changeHRState;
     // on button click, advance station - (currentstation +1) % 4
