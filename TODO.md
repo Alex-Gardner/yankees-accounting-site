@@ -45,8 +45,8 @@ And the above ^
 
 
 HR PAGE
-Animation Timing function
+++Animation Timing function
 Mobile Layout
-Page Title 
-Some sort of interaction notification on button (pulsing shadow?) - while clickcount < w/e, add shadow class
+++Page Title 
+++Some sort of interaction notification on button (pulsing shadow?) - while clickcount < w/e, add shadow class
 debounce on button click

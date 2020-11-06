@@ -1287,6 +1287,137 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
 /* ---------------------------------------------------------------------------------------------------------
 Human Resources Page
 ----------------------------------------------------------------------------------------------------------- */
+.human-resources-page-content {
+}
+
+.hr-hero-section {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: var(--hrHeroBgColor); 
+}
+.hr-hero-drawing {
+    flex-basis: 60%;
+}
+.outer-holder.dark .hr-hero-img-wall {
+    fill: var(--HRHeroImgWallColor);
+}
+.outer-holder.dark .hr-hero-img-floor {
+    fill: var(--HRHeroImgFloorColor);
+}
+.hr-page-title {
+    font-size: 3.5em;
+    font-weight: 500;
+    text-align: center;
+}
+
+.hr-title-letter-1 {
+    color: #339CFD;
+}
+.hr-title-letter-2 {
+    color: #9D5BF1;
+}
+
+.icon-holder svg {
+    height: auto;
+    width: max(60px, 30%);
+}
+.icon-holder-1 svg {
+    width: max(60px, 40%);
+}
+.icon-holder-2 svg {
+    height: max(60px, 80%);
+    width: auto;
+}
+.icon-holder-3 svg {
+    width: max(60px, 40%);
+}
+
+.outer-holder.dark .hr-interactive-section-outside-window {
+    fill: #0A0D2B;
+}
+.outer-holder.dark .hr-interactive-section-outside-clouds {
+    fill: #525252;
+}
+.outer-holder.dark .hr-interactive-section-bg-wall {
+    fill: #252525;
+}
+.outer-holder.dark .hr-interactive-section-bg-floor {
+    fill: #1D1D1D;
+}
+.hr-information-content-holder {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+.hr-interactions-and-icons-holder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.hr-interactions-and-icons-holder > * {
+    /* width: 100%;
+    height: 100%; */
+}
+.hr-interactions-and-icons-holder > * > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    width: 80vw;
+}
+
+.movable-icons-holder {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: -1;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.movable-icons-holder > div:nth-child(2) {
+    background: linear-gradient(113.28deg, #FFFFFF 2.6%, #FF2F3C 107.59%);
+    order: 2;
+}
+.movable-icons-holder > div:nth-child(3) {
+    background: linear-gradient(113.28deg, #D7F8FF 2.6%, #01B6DE 107.59%);
+    order: 4;
+}
+.movable-icons-holder > div:nth-child(4) {
+    background: linear-gradient(113.28deg, #9BF7D6 2.6%, #0BBBB0 107.59%);
+    order: 3;
+}
+
+.movable-icons-holder > div:first-child {
+    background: linear-gradient(113.28deg, hsla(227 100% 83% / 100%) 2.6%, hsla(266 71% 62% / 100%) 107.59%);
+}
+
+.hr-text-information-holder {
+    display: flex;
+    flex-direction: column;
+}
+.hr-text-information-holder > div {
+    /* background-color: hsla(100 100% 100% / 85%);  variable for light and dark    */
+    background-color: var(--serviceItemOverlayShade);  /*variable for light and dark   */ 
+}
+.hr-info-blurb {
+    font-size: calc(5px + 3vw);
+    font-weight: 500;
+    padding: 2%;
+}
+
+.person-with-box {
+    transform: translateY(6%);
+}
+
+
+
+
 
 
 /* ---------------------------------------------------------------------------------------------------------
@@ -1923,6 +2054,7 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
 
 .hr-hero-section {
     display: flex;
+    flex-direction: row;
     background-color: var(--hrHeroBgColor); 
 }
 .hr-hero-drawing {
@@ -1937,38 +2069,25 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
 .hr-page-title {
     font-size: 6em;
     font-weight: 400;
+    text-align: left;
 }
-.hr-page-title .title-span-1::first-letter {
-}
-.hr-title-letter-1 {
-    color: #339CFD;
-}
-.hr-title-letter-2 {
-    color: #9D5BF1;
-}
+
 .hr-page-title .title-span-2 {
     margin-left: 4%;
 }
-.outer-holder.dark .hr-interactive-section-outside-window {
-    fill: #0A0D2B;
-}
-.outer-holder.dark .hr-interactive-section-outside-clouds {
-    fill: #525252;
-}
-.outer-holder.dark .hr-interactive-section-bg-wall {
-    fill: #252525;
-}
-.outer-holder.dark .hr-interactive-section-bg-floor {
-    fill: #1D1D1D;
-}
+
 .hr-information-content-holder {
-    min-height: 68vw;
+    margin-top: 0;
+    min-height: 60vw;
     display: flex;
+    flex-direction: row;
     /* margin-top: 5%; */
     align-items: center;
 }
 .hr-interactions-and-icons-holder {
+    display: block;
     position: relative;
+    min-height: auto;;
     flex-basis: 40vw;
     /* width: 46vw; */
     height: 20vw;
@@ -2005,6 +2124,7 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
 
 .movable-icons-holder {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     position: absolute;
     z-index: 1;
@@ -2012,8 +2132,7 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
     margin: 0;
     border: none;
     background-color: rgba(255, 255, 255, 0);
-    cursor: pointer;
-    
+    cursor: pointer;  
 }
 .outer-holder.light .movable-icons-holder.dancing-shadow {
     animation: dancingShadowLight 5s ease-in 0s infinite;
@@ -2037,14 +2156,15 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
     transform: translate(0, -5%);
 }
 .movable-icons-holder > div:first-child {
-    background-color: rgba(0 0 0 / 0%);
+    background: rgba(0 0 0 / 0%);
 }
 .hr-text-information-holder {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 .hr-info-blurb {
-    font-size: calc(3px + .7vw);
+    font-size: calc(3px + 1vw);
     padding: 2%;
 }
 
