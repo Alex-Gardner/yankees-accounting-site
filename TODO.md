@@ -46,7 +46,8 @@ And the above ^
 
 HR PAGE
 ++Animation Timing function
-Mobile Layout
+++Mobile Layout
 ++Page Title 
 ++Some sort of interaction notification on button (pulsing shadow?) - while clickcount < w/e, add shadow class
-debounce on button click
+++debounce on button click
+  - Instead of running debounce, disable button for x seconds after click?

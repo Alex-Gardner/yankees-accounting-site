@@ -10,9 +10,23 @@ const contentPageSplashImg = document.querySelector('#contact-splash-image');
 const bizAcquisitionSplashImg = document.querySelector('#purchase-sales-biz-acq-dec-img')
 const slideInItems = document.querySelectorAll('.slide-right, .slide-left')
 
-const smallTriangle = document.querySelector('#small-svg-triangle');
+/* Useful debounce function in top level scope - taken from: 
+https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086*/
 
-console.log(smallTriangle)
+const debounce = (func, wait) => {
+    let timeout;
+  
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+  
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  };
+
 
 // Default Mode to saved local storage
 // localStorage.setItem('colorScheme', 'dark')
@@ -135,12 +149,18 @@ if (hrButtonIcons) {
             hrIconsButton.classList.remove('dancing-shadow')
         }
     }
-    function changeHRState() {
+    // function changeHRState() {
+    //     changeHRIconStation();
+    //     visibleHRWorkers();
+    //     fadeInPersonSVG();
+    //     stopButtonGlow();
+    // }
+    var changeHRState = debounce(function() {
         changeHRIconStation();
         visibleHRWorkers();
         fadeInPersonSVG();
         stopButtonGlow();
-    }
+    }, 200)
     hrIconsButton.onclick = changeHRState;
     // on button click, advance station - (currentstation +1) % 4
     // replace currentStation className with currentStation's className

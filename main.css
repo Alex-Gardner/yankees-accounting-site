@@ -99,7 +99,8 @@ button, a {
 
     --hrHeroBgColor: #F1F1FC;
     --HRHeroImgWallColor: #F8F8FF;
-    --HRHeroImgFloorColor: #F5F5FC;    
+    --HRHeroImgFloorColor: #F5F5FC;
+    --hr-page-bg-shade: #fff;  
 }
 .outer-holder.dark {
     --mainBGColor: hsla(0 0% 9% / 100%);
@@ -160,6 +161,8 @@ button, a {
     --hrHeroBgColor: #171717;
     --HRHeroImgWallColor: #1A1A1A;
     --HRHeroImgFloorColor: #141414;
+    --hr-page-bg-shade: #171717;
+    --hr-page-bg-shade: hsla(0 0% 0% / 0%);
 }
 
 
@@ -1401,14 +1404,20 @@ Human Resources Page
     display: flex;
     flex-direction: column;
 }
+.svg-office-holder {
+    width: 100%;
+    height: auto;
+}
 .hr-text-information-holder > div {
     /* background-color: hsla(100 100% 100% / 85%);  variable for light and dark    */
+    background-color: var(--hr-page-bg-shade);  /*variable for light and dark   */ 
     background-color: var(--serviceItemOverlayShade);  /*variable for light and dark   */ 
 }
 .hr-info-blurb {
     font-size: calc(5px + 3vw);
     font-weight: 500;
     padding: 2%;
+    color: var(--blurbTextColor);
 }
 
 .person-with-box {
@@ -1416,8 +1425,72 @@ Human Resources Page
 }
 
 
+/* ---------------------------------------------------- */ 
+.hr-extended-services-top-spacer {
+    width: 100%;
+    height: 35vh;
+}
+.hr-extended-services-bot-spacer {
+    width: 100%;
+    height: 30vh;
+}
+.hr-extended-services-holder {
+    position: relative;
+}
 
+.hr-extended-services-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+}
 
+.hr-services-text-holder {
+    padding: 3%;
+    position: relative;
+}
+.hr-services-text-holder p {
+    /* color: hsla(0 0% 39% / 100%);    */
+    color: var(--blurbTextColor);  /* Varible Color   */ 
+    padding: 7% 0%;
+    font-weight: 500;
+}
+
+.hr-services-color-triangle {
+    height: auto;
+    width: 80px;
+    position: absolute;
+    z-index: 1;
+}
+.hr-services-color-triangle-1 {
+    top: -142px;
+    left: 13px;
+    
+}
+.hr-services-color-triangle-2 {
+    bottom: -80px;
+    right: 26px;
+}
+.right-triangle-watermark-light {
+    position: absolute;
+    z-index: -1;
+    height: 44vh;
+    width: auto;
+    fill: #F5F5F5;
+}
+.outer-holder.dark .right-triangle-watermark-light {
+    fill: #1C1C1C;
+
+}
+.hr-text-watermark-1 {
+    transform: rotate(180deg);
+    left: 1.2%;
+    top: -4px;
+}
+.hr-text-watermark-2 {
+    transform: rotate(0deg);
+    bottom: 0px;
+    right: 14px;
+}
 
 
 /* ---------------------------------------------------------------------------------------------------------
@@ -2105,6 +2178,7 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
     justify-content: center;
 }
 .svg-office-holder {
+    width: unset;
     flex-basis: 60vw;
 }
 .icon-holder svg {
@@ -2133,6 +2207,15 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
     border: none;
     background-color: rgba(255, 255, 255, 0);
     cursor: pointer;  
+}
+.movable-icons-holder:focus {
+    outline: none;
+    animation: dancingShadowLight 5s ease-in 0s infinite;
+}
+.outer-holder.dark .movable-icons-holder:focus {
+    outline: none;
+    animation: dancingShadowLight 5s ease-in 0s infinite;
+    animation: dancingShadowDark 5s ease-in 0s infinite;
 }
 .outer-holder.light .movable-icons-holder.dancing-shadow {
     animation: dancingShadowLight 5s ease-in 0s infinite;
@@ -2166,6 +2249,9 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
 .hr-info-blurb {
     font-size: calc(3px + 1vw);
     padding: 2%;
+}
+.hr-text-information-holder > div {
+    background-color: var(--hr-page-bg-shade);  /*variable for light and dark   */ 
 }
 
 
@@ -2264,6 +2350,61 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
 .office-holder-click-2 .lifter-and-box {
     opacity: 1;
 }
+
+/* -------------------- 
+
+*/
+
+.hr-extended-services-top-spacer {
+    height: 10vh;
+}
+.hr-extended-services-bot-spacer {
+    width: 100%;
+    height: 10vh;
+}
+
+.hr-extended-services-holder {
+    position: relative;
+}
+.hr-services-text-holder {
+    padding: 3%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hr-services-text-holder p {
+    padding: 40px 0%;
+    font-weight: 500;
+    max-width: 850px;
+}
+
+.hr-services-color-triangle-1 {
+    top: -142px;
+    left: 21%;
+    
+}
+.hr-services-color-triangle-2 {
+    bottom: -80px;
+    right: 21%;
+}
+
+
+
+
+
+.hr-text-watermark-1 {
+    transform: rotate(0deg);
+    left: 10%;
+    top: -4px;
+}
+.hr-text-watermark-2 {
+    transform: rotate(180deg);
+    right: 10%;
+    bottom: 0px;
+}
+
 
 
 

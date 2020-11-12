@@ -1,0 +1,9 @@
+<svg width="30" height="43" viewBox="0 0 30 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.49738e-07 21.5L30 0.28238L30 42.7176L2.49738e-07 21.5Z" fill="url(#blue-triangle-gradient0)"/>
+<defs>
+<linearGradient id="blue-triangle-gradient0" x1="2.49738e-07" y1="21.5" x2="40" y2="21.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#01B7DF"/>
+<stop offset="1" stop-color="#D6F8FF"/>
+</linearGradient>
+</defs>
+</svg>
