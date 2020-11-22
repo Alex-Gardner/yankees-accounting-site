@@ -51,3 +51,6 @@ HR PAGE
 ++Some sort of interaction notification on button (pulsing shadow?) - while clickcount < w/e, add shadow class
 ++debounce on button click
   - Instead of running debounce, disable button for x seconds after click?
+
+Business Financing Page
+- Change LI markers to custom version (idea1 - diamond over circle)

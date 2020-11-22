@@ -101,6 +101,12 @@ button, a {
     --HRHeroImgWallColor: #F8F8FF;
     --HRHeroImgFloorColor: #F5F5FC;
     --hr-page-bg-shade: #fff;  
+
+    --bg-gradient-start: hsla(0 0% 100% / 90%);
+    --bg-gradient-end: hsla(0 0% 100% / 0%);
+    --biz-fin__funds-border-highlight: #00B2B2;
+    --biz-fin__funds-gradient-start: hsla(281 99% 96% / 100%);
+    --biz-fin__funds-gradient-end: hsla(198 96% 90% / 100%);
 }
 .outer-holder.dark {
     --mainBGColor: hsla(0 0% 9% / 100%);
@@ -163,6 +169,12 @@ button, a {
     --HRHeroImgFloorColor: #141414;
     --hr-page-bg-shade: #171717;
     --hr-page-bg-shade: hsla(0 0% 0% / 0%);
+
+    --bg-gradient-start: hsla(0 0% 9% / 90%);
+    --bg-gradient-end: hsla(0 0% 9% / 0%);
+    --biz-fin__funds-border-highlight: #045162;
+    --biz-fin__funds-gradient-end: hsla(0 0% 7% / 100%);
+    --biz-fin__funds-gradient-start: hsla(0 0% 17% / 100%);
 }
 
 
@@ -1498,7 +1510,175 @@ Human Resources Page
 ----------------------------------------------------------------------------------------------------------- */
 
 
-/* --------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------
+Business Financing Page
+----------------------------------------------------------------------------------------------------------- */
+
+.business-financing-page-content {
+    
+}
+
+.biz-fin-hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.biz-fin-page-title {
+    font-size: 4em;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: -3px;
+}
+.biz-fin__hero-spacer-vertical {
+    width: 100%;
+    height: 100px;
+}
+
+.biz-fin-hero-blurb{
+    width: min(90vw, 650px);
+    color: var(--blurbTextColor);
+}
+
+.biz-fin-page-content-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.biz-fin-main-media-holder {
+    /* max-width: 94vw;
+    width: 100%; */
+    width: min(100%, 94vw)
+}
+
+.biz-fin__media-spacing-vertical {
+    width: 100%;
+    height: 100px;
+}
+
+.biz-fin__intra-media-spacer-vert {
+    width: 100%;
+    height: max(80vw, 200px);
+}
+
+.biz-fin__media-horiz-container {
+    display: flex;
+    width: 100%;
+    /* min-height: 85vw; */
+    align-items: center;
+    position: relative;
+    padding: 80px 0;
+    background: linear-gradient(360deg, var(--bg-gradient-start) 80%, var(--bg-gradient-end) 100%);
+}
+
+
+
+
+.biz-fin__media-horiz-container.right-align {
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+}
+
+
+.biz-fin__details-title {
+    margin-bottom: 20px;
+}
+
+.biz-fin__details-list, 
+.biz-fin__details-small-biz-blurb,  
+.biz-fin__finance-soln-list, 
+.biz-fin__industry-soln-list,
+.biz-fin-funds-usage__list {
+    color: var(--blurbTextColor);
+}
+
+.biz-fin__details-title,
+.biz-fin__soln-item h4 {
+    font-weight: 400;
+}
+
+.biz-fin__details-small-biz-blurb {
+    padding-left: 10px;
+}
+
+.biz-fin__media-img-collage-holder {
+    top: 0;
+    transform: translate(0, min(-85%, -50px));
+}
+
+.biz-fin__media-horiz-container.left-align .biz-fin__media-img-collage-holder {
+    right: 0px;
+}
+.biz-fin__media-horiz-container.right-align .biz-fin__media-img-collage-holder {
+    left: 0px;
+}
+
+.biz-fin__media-img-collage-holder {
+    position: absolute;
+    height: 80vw;
+    width: 80vw;
+    z-index: -1;
+}
+.biz-fin__collage-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.biz-fin__img-collage-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.biz-fin__intra-soln-spacer {
+    width: 100%;
+    height: 50px;
+}
+.biz-fin__soln-item {
+    margin-left: min(50px, 11vw);
+}
+.biz-fin__soln-item h4 {
+    margin-bottom: 5px;
+}
+
+.biz-fin__solutions-bottom-spacer-vert {
+    width: 100%;
+    height: max(100px, 15vh);
+}
+
+.biz-fin-funds-usage-card { 
+    padding: 20px;
+    border-top: 7px solid var(--biz-fin__funds-border-highlight);
+    background: linear-gradient(360deg, var(--biz-fin__funds-gradient-start) 0%, var(--biz-fin__funds-gradient-end) 100%);
+    border-radius: 3%;
+    margin-bottom: 3vh;
+}
+.biz-fin-funds-title {
+    margin-bottom: 5px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------
+                                
+----------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* --------------------------
+
+-----------------------------------
+
+Larger than Tablet Media Query
+
+-----------------------------------
+-----------------------------------
+
+------------------------------------- */
 
 @media (min-width: 900px) {
     .site-header {
@@ -2407,6 +2587,207 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
 
 
 
+
+/* ---------------------------------------------------------------------------------------------------------
+                                
+----------------------------------------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------------------------------------
+Business Financing Page
+----------------------------------------------------------------------------------------------------------- */
+
+.business-financing-page-content {
+    
+}
+
+.biz-fin-hero-section {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.biz-fin-page-title {
+    /* font-size: 4em;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: -3px; */
+}
+.biz-fin__hero-spacer-vertical {
+    width: 100%;
+    height: 100px;
+}
+
+.biz-fin-hero-blurb{
+    /* width: min(90vw, 650px);
+    color: var(--blurbTextColor); */
+}
+
+.biz-fin-page-content-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.biz-fin-main-media-holder {
+    width: min(100%, 94vw);
+    position: relative;
+}
+.biz-fin__media-outer-box {
+    padding: 0 9%;
+}
+
+.biz-fin__media-spacing-vertical {
+    width: 100%;
+    height: 100px;
+}
+
+.biz-fin__intra-media-spacer-vert {
+    width: 100%;
+    /* height: max(80vw, 200px); */
+    height: 0;
+}
+
+.biz-fin__media-horiz-container {
+    display: flex;
+    width: 100%;
+    /* height: 60vh; */
+    align-items: center;
+    position: relative;
+    padding: 0;
+    background: transparent;
+}
+
+
+.biz-fin__media-horiz-container.right-align {
+    display: flex;
+    justify-content: center;
+    text-align: start;
+}
+.biz-fin__details-inner-container {
+    width: min(40ch, 100%);
+}
+
+.biz-fin-solutions-details {
+    margin-top: 100px;
+}
+.biz-fin__details-title {
+    margin-bottom: 20px;
+}
+
+/* .biz-fin__details-list, 
+.biz-fin__details-small-biz-blurb,  
+.biz-fin__finance-soln-list, 
+.biz-fin__industry-soln-list,
+.biz-fin-funds-usage__list {
+    color: var(--blurbTextColor);
+} */
+
+.biz-fin__details-title,
+.biz-fin__soln-item h4 {
+    font-weight: 400;
+}
+
+.biz-fin__details-small-biz-blurb {
+    padding-left: 10px;
+}
+
+.biz-fin__media-img-collage-holder {
+    top: 0;
+    transform: translate(0, 0);
+}
+
+.biz-fin__media-horiz-container.left-align .biz-fin__media-img-collage-holder {
+    right: auto;
+}
+.biz-fin__media-horiz-container.right-align .biz-fin__media-img-collage-holder {
+    left: auto;
+}
+
+.biz-fin__media-horiz-container > div {
+    flex-basis: 50%;
+}
+
+.biz-fin__media-img-collage-holder {
+    position: static;
+    height: inherit;
+    width: inherit;
+    height: auto;
+    /* z-index: -1; */
+}
+.biz-fin__collage-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.biz-fin__financing-offer-details-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.biz-fin__img-collage-overlay {
+    /* position: absolute; */
+    /* height: 100%;
+    width: 100%; */
+    display: none;
+}
+
+
+
+/*                                    -  */
+
+.biz-fin__intra-soln-spacer {
+    width: 100%;
+    height: 50px;
+}
+.biz-fin__soln-item {
+    margin-left: min(50px, 11vw);
+}
+.biz-fin__soln-item h4 {
+    margin-bottom: 5px;
+}
+
+.biz-fin__solutions-bottom-spacer-vert {
+    width: 100%;
+    height: max(100px, 15vh);
+}
+
+.biz-fin-funds-usage-card { 
+    padding: 20px;
+    border-top: 7px solid var(--biz-fin__funds-border-highlight);
+    background: linear-gradient(360deg, var(--biz-fin__funds-gradient-start) 0%, var(--biz-fin__funds-gradient-end) 100%);
+    border-radius: 3%;
+    margin-bottom: 3vh;
+}
+.biz-fin-funds-title {
+    margin-bottom: 5px;
+}
+
+.biz-fin-media__watermark-holder {
+}
+.biz-fin__bubble-watermark {
+    position: absolute;
+    z-index: -1;
+    height: 30vw;
+    width: 30vw;
+}
+.biz-fin__watermark-1 {
+    top: 11%;
+    right: 44%;
+    
+}
+.biz-fin__watermark-2 {
+    top: 34%;
+    right: -5%;
+    
+}
+.biz-fin__watermark-3 {
+    top: 60%;
+    right: 67%;
+    
+}
 
 /* ---------------------------------------------------------------------------------------------------------
                                 
