@@ -64,8 +64,8 @@ button, a {
     
     --testimonial-link-color: hsla(173 100% 27% / 100%);
     --testimonial-img-overlay: linear-gradient(180deg, rgba(255, 255, 255, .4) 3.16%, rgba(255, 255, 255, .8) 100%);
-    --testimonial-page-title-gradient: radial-gradient(50% 196.96% at 50% 50%, #F2FFF0 0%, #D7FFE2 64.48%, #BEFFE0 98.17%);;
-    --testimonial-title-color: hsla(187 53% 40% / 100%);
+    --testimonial-page-title-gradient: radial-gradient(50% 196.96% at 50% 50%, #FFFFFF 0%, #E6FFED 64.48%, #BEFFE0 98.17%);;
+    --testimonial-title-color: hsla(194 79% 35% / 100%);
     --testimonial-quote-background: hsla(166 85% 86% / 30%);
     --testimonial-quote-text-color: hsla(216 64% 21% / 100%);
     --testimonial-quote-icon-color: hsla(165 33% 62% / 100%);
@@ -310,7 +310,7 @@ button, a {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: var(--mobileOverlayShade);
 }
 .splash-content-holder {
@@ -339,7 +339,8 @@ button, a {
     padding: 2%;
     font-weight: 200;
     text-align: center;
-    font-size: 3.4em;
+    font-size: 3.2em;
+    letter-spacing: -2px;
 }
 
 .accent-divider {
@@ -371,8 +372,9 @@ button, a {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 5px 3px 10px -2px #474747;
+    box-shadow: 5px 3px 10px -2px #0A0A0A;
     flex-basis: 37vw;
+    height: 90px;
 }
 .warning-notice {
     border: 2px dotted #f00000;
