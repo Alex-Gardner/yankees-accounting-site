@@ -18,7 +18,7 @@ html {
 
 body {
     font-family: 'Raleway', 'Arial', sans-serif;
-    background-color: #000;
+    background-color: #171717;
     display: flex;
     justify-content: center;
 }
@@ -58,7 +58,7 @@ button, a {
     --serviceDescriptionTextColor: hsla(0 0% 38% / 100%);
     --buttonAccentColor: hsla(0 0% 0% / 100%);
     --buttonArrowAccent: hsla(39 100% 89% / 100%);
-    --imageOverlayShade: hsla(0 0% 100% / 80%);
+    --imageOverlayShade: hsla(0 0% 100% / 85%);
     --serviceItemOverlayShade: hsla(0 0% 100% / 85%);
     --serviceItemShadow: #474747;
     
@@ -104,8 +104,8 @@ button, a {
 
     --bg-gradient-start: hsla(0 0% 100% / 90%);
     --bg-gradient-end: hsla(0 0% 100% / 0%);
-    --biz-fin__funds-border-highlight: #00B2B2;
-    --biz-fin__funds-gradient-start: hsla(281 99% 96% / 100%);
+    --biz-fin__funds-border-highlight: #008282;
+    --biz-fin__funds-gradient-start: hsla(230 99% 96% / 100%);
     --biz-fin__funds-gradient-end: hsla(198 96% 90% / 100%);
 }
 .outer-holder.dark {
@@ -172,9 +172,10 @@ button, a {
 
     --bg-gradient-start: hsla(0 0% 9% / 90%);
     --bg-gradient-end: hsla(0 0% 9% / 0%);
-    --biz-fin__funds-border-highlight: #045162;
+    /* --biz-fin__funds-border-highlight: #045162; */
+    --biz-fin__funds-border-highlight: #045A8B;
     --biz-fin__funds-gradient-end: hsla(0 0% 7% / 100%);
-    --biz-fin__funds-gradient-start: hsla(0 0% 17% / 100%);
+    --biz-fin__funds-gradient-start: hsla(0 0% 11% / 100%);
 }
 
 
@@ -188,7 +189,7 @@ button, a {
     flex-direction: column;
     align-items: center;
     background-color: var(--mainBGColor);
-    background-image: url('./assets/background-svg.svg');
+    /* background-image: url('./assets/background-svg.svg'); */
     color: var(--headlineColor);
     z-index: 0;
 }
@@ -749,8 +750,7 @@ button, a {
     align-items: flex-end;
 }
 .quote-text-holder {
-    backdrop-filter: blur(11px);
-    -webkit-backdrop-filter: blur(11px);
+    position: relative;
 }
 .quote-text {
     position: relative;
@@ -868,6 +868,9 @@ button, a {
 }
 .phone-cta {
     margin: 3% 0;
+}
+.email-cta a {
+    color: var(--testimonial-contact-link-color);
 }
 .contact-us-blurb span {
     text-transform: uppercase;
@@ -1542,6 +1545,110 @@ Business Financing Page
     color: var(--blurbTextColor);
 }
 
+/*  ---------------------Temporary Covid-19 Section--------------------- */
+.full-length-horiz-rule {
+    width: 100%;
+    height: 5px;
+    background-color:var(--low-contrast-divider-color);
+}
+.micro-spacer {
+    width: 100%;
+    height: 20px;
+}
+.small-spacer {
+    width: 100%;
+    height: 6vh;   
+}
+.medium-spacer {
+    width: 100%;
+    height: 10vh;    
+}
+
+.biz-fin__covid-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.biz-fin__covid__headline-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max(1vw, 115px);
+    background-color: #C41D1D;
+    width: 100%;
+}
+.biz-fin__covid-headline {
+    color: #fff;
+    text-align: center;
+}
+.biz-fin__covid-loan-title {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.biz-fin__covid-ppp {
+    text-align: center;
+    position: relative;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.biz-fin__covid-ppp::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 80%;
+    background-color: #C41D1D;
+}
+
+.biz-fin__covid-loan-info {
+    font-size: 1em;
+    max-width: 73ch; 
+    margin: 1ch;
+    line-height: 1.2;
+    color: var(--blurbTextColor);
+}
+
+.biz-fin__covid-loan-features-list {
+    font-size: 1em;
+    padding: 0;
+    margin: 6ch 0;
+}
+.biz-fin__covid-loan-features-list h4 {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+.biz-fin__covid-loan-features-list > * {
+    padding: 1ch 0;
+}
+.biz-fin__covid-loan-features-list > *:not(h4) {
+    margin-left: 50px;
+    color: var(--blurbTextColor);
+}
+
+
+.biz-fin__covid-loan-support-contact {
+    text-align: center;
+}
+.biz-fin__covid-loan-support-contact a {
+    color: var(--testimonial-contact-link-color);
+}
+
+
+
+.biz-fin__covid-section-small-rule-end {
+    height: 10px;
+    width: 115px;
+    border-radius: 3px;
+    background-color: #C41D1D;
+}
+
+/*------------------------------------------*/
+
+
 .biz-fin-page-content-holder {
     display: flex;
     flex-direction: column;
@@ -1712,7 +1819,7 @@ Larger than Tablet Media Query
         /* flex-direction: column;
         align-items: center; */
         width: 100%;
-        height: 100vh;
+        /* height: 100vh; */
         background-color: hsla( 0 0% 0% / 0%);
     }
 
@@ -2676,7 +2783,7 @@ Business Financing Page
     margin-top: 100px;
 }
 .biz-fin__details-title {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 /* .biz-fin__details-list, 
@@ -2690,6 +2797,7 @@ Business Financing Page
 .biz-fin__details-title,
 .biz-fin__soln-item h4 {
     font-weight: 400;
+    font-size: 1.5em;
 }
 
 .biz-fin__details-small-biz-blurb {
