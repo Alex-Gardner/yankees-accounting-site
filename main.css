@@ -44,7 +44,7 @@ button, a {
     --mainBGColor: #fff;
     --headerBGColor: hsla(0 0% 87% / 72%);
     --headerBGVariableOpacity: hsla(0 0% 95% / 90%);
-    --mobileOverlayShade: hsla(0 0% 100% / 79%);
+    --mobileOverlayShade: hsla(0 0% 100% / 90%);
     --headlineColor: #000;
     --blurbTextColor: hsla(0 0% 38% / 100%);
     --secondaryColor: hsla(216 33% 29% / 100%);
@@ -112,7 +112,7 @@ button, a {
     --mainBGColor: hsla(0 0% 9% / 100%);
     --headerBGColor: hsla(0 0% 5% / 69%);
     --headerBGVariableOpacity: hsla(0 0% 5% / 80%);
-    --mobileOverlayShade: hsla(0 0% 9% / 60%);
+    --mobileOverlayShade: hsla(0 0% 9% / 90%);
     --headlineColor: #fff;
     --blurbTextColor: hsla(0 0% 68% / 100%);
     --secondaryColor: hsla(216 33% 29% / 100%);
@@ -189,7 +189,7 @@ button, a {
     flex-direction: column;
     align-items: center;
     background-color: var(--mainBGColor);
-    /* background-image: url('./assets/background-svg.svg'); */
+    /* background-image: url('./assets/icons/background-svg.svg'); */
     color: var(--headlineColor);
     z-index: 0;
 }
@@ -1226,7 +1226,7 @@ textarea.contact-input {
     width: 100%;
     position: absolute;
     z-index: -1;
-    background: url(./assets/andrik-langfield-EzNY6jUn4mk-unsplash.jpg);
+    background: url(./assets/andrik-langfield-EzNY6jUn4mk-unsplash.webp);
     background-attachment: fixed;
     background-size: 100% 82%;
     background-position: 0% 0%;
@@ -2305,7 +2305,7 @@ Larger than Tablet Media Query
     width: 100%;
     position: absolute;
     z-index: -1;
-    background: url(./assets/andrik-langfield-EzNY6jUn4mk-unsplash.jpg);
+    background: url(./assets/andrik-langfield-EzNY6jUn4mk-unsplash.webp);
     background-attachment: fixed;
     background-size: 100% 82%;
     background-position: 0% 0%;

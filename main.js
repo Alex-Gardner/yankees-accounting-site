@@ -50,17 +50,17 @@ function setDefaultMode(modeChoice) {
     if (colorScheme === 'light') {
         pageRoot.classList.add('light')
         lightDarkText.innerHTML = "Dark"
-        if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-pixabay-268819.jpg'}
-        if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg'}
-        if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-light.png'}
-        if (!bizAcquisitionSplashImg) {} else {bizAcquisitionSplashImg.src = './assets/micheile-henderson-lZ_4nPFKcV8-unsplash.jpg'}
+        if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-pixabay-268819.webp'}
+        if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/nastuh-abootalebi-yWwob8kwOCk-unsplash.webp'}
+        if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-light.webp'}
+        if (!bizAcquisitionSplashImg) {} else {bizAcquisitionSplashImg.src = './assets/micheile-henderson-lZ_4nPFKcV8-unsplash.webp'}
     } else if (colorScheme === 'dark') {
         pageRoot.classList.add('dark')
         lightDarkText.innerHTML = "Light"
-        if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-taryn-elliott-4183522.jpg'}
-        if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/jamie-street-dO9zecIYnWA-unsplash.jpg'}
-        if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-dark.png'}
-        if (!bizAcquisitionSplashImg) {} else {bizAcquisitionSplashImg.src = './assets/william-daigneault-oWrZoAVOBS0-unsplash.jpg'}
+        if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-taryn-elliott-4183522.webp'}
+        if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/jamie-street-dO9zecIYnWA-unsplash.webp'}
+        if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-dark.webp'}
+        if (!bizAcquisitionSplashImg) {} else {bizAcquisitionSplashImg.src = './assets/william-daigneault-oWrZoAVOBS0-unsplash.webp'}
     }
 })();
         
@@ -74,19 +74,19 @@ function toggleLightDarkMode() {
         setDefaultMode('light')
         pageRoot.classList.replace('dark', 'light')
         lightDarkText.innerHTML = "Dark"
-        if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-pixabay-268819.jpg'}
-        if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg'}
-        if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-light.png'}               
-        if (!bizAcquisitionSplashImg) {} else {bizAcquisitionSplashImg.src = './assets/micheile-henderson-lZ_4nPFKcV8-unsplash.jpg'}               
+        if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-pixabay-268819.webp'}
+        if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/nastuh-abootalebi-yWwob8kwOCk-unsplash.webp'}
+        if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-light.webp'}               
+        if (!bizAcquisitionSplashImg) {} else {bizAcquisitionSplashImg.src = './assets/micheile-henderson-lZ_4nPFKcV8-unsplash.webp'}               
     }
     else if (pageRoot.classList.contains('light')) {
         setDefaultMode('dark')
         pageRoot.classList.replace('light', 'dark')
         lightDarkText.innerHTML = "Light"
-        if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-taryn-elliott-4183522.jpg'}
-        if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/jamie-street-dO9zecIYnWA-unsplash.jpg'}
-        if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-dark.png'}        
-        if (!bizAcquisitionSplashImg) {} else {bizAcquisitionSplashImg.src = './assets/william-daigneault-oWrZoAVOBS0-unsplash.jpg'}        
+        if (!testimonialsSplashImg) {} else {testimonialsSplashImg.src = './assets/pexels-taryn-elliott-4183522.webp'}
+        if (!serviceHolderBGIMG) {} else {serviceHolderBGIMG.src = './assets/jamie-street-dO9zecIYnWA-unsplash.webp'}
+        if (!contentPageSplashImg) {} else {contentPageSplashImg.src = './assets/contact-page-mask-dark.webp'}        
+        if (!bizAcquisitionSplashImg) {} else {bizAcquisitionSplashImg.src = './assets/william-daigneault-oWrZoAVOBS0-unsplash.webp'}        
     }
 }
 
