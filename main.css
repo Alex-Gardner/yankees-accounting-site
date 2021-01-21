@@ -139,7 +139,7 @@ button, a {
     --testimonial-quote-divider-color: hsla(21 23% 64% / 100%);
     --testimonial-source-text-color: hsla(29 96% 66% / 100%);
     --testimonial-source-bg-color: hsla(202 100% 13% / 74%);
-    --testimonial-contact-blurb-color: hsla(166 59% 60% / 100%);
+    --testimonial-contact-blurb-color: hsla(166 50% 48% / 100%);
     --testimonial-contact-link-color: hsla(202 100% 40% / 100%);
 
     --contact-page-title-color: hsla(0 0% 100% / 56%);
@@ -516,7 +516,7 @@ button, a {
     align-items: center;
 }
 .contact-holder p, .contact-holder a, .contact-holder a:visited {
-    color: #417CC9;
+    color: #4888DD;
 }
 .phone-contacts {
     height: 70%;
@@ -891,28 +891,40 @@ button, a {
 }
 .contact-us-form {
     margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .contact-us-form label {
     font-size: .7em;
 }
 
-.contact-us-form > div {
+.input-holder {
     position: relative;
-    margin: 5% 0;
+    margin-bottom: 20px;
 }
-.contact-us-form > div > label {
+.input-holder > label {
     position: absolute;
+    font-weight: 400;
     top: 50%;
     left: clamp(10px, 2%, 15px);
     transform: translateY(-50%);
-    transition: all .1s ease-in-out;
+    transition: transform .1s ease-in-out;
     color: var(--contact-form-label-color);
 }
+
+.contact-name-holder {
+    display: flex;
+    flex-direction: column;
+}
+
+
 .contact-text-holder > label {
     top: 20px !important;
 }
+
 .contact-input:focus + label {
-    transform: translateY(-150%);
+    transform: translateY(-160%);
     background-color: var(--contact-floating-label-bg-color);
     color: var(--contact-floating-label-text-color);
     padding: 0 3px;
@@ -920,10 +932,10 @@ button, a {
 .contact-input:valid + label {
     display: none;
 }
-input:-moz-ui-invalid {
+input.contact-input:-moz-ui-invalid {
     box-shadow: none;
 }
-textarea:-moz-ui-invalid {
+textarea.contact-input:-moz-ui-invalid {
     box-shadow: none;
 }
 .contact-input:invalid {
@@ -931,26 +943,32 @@ textarea:-moz-ui-invalid {
     border: var(--contact-input-border);
     border-left: 2px solid hsla(0 100% 80% / 100%);
 }
-.contact-email-holder input:invalid + label {
+.contact-company-holder > input:valid + label {
     
-    /* transform: translateY(-190%); 
-     color: hsla(0 71% 45% / 100%); */
 }
+.contact-company-holder > input::placeholder {
+    color: var(--contact-form-label-color);
+    font-weight: 400;
+    font-size: .7em;
+}
+
+
 
 
 .contact-input {
     border-radius: 4px;
+    font-weight: 500;
     border: var(--contact-input-border);
     background-color: var(--contact-input-bg-color);
     color: var(--contact-input-text-color);
     padding-left: 5px;
-    transition: all .1s ease-in-out;    
 }
+
 .contact-input:focus {
     border: var(--contact-input-border);
     outline: hsla(216 48% 57% / 100%);
-    box-shadow: var(--contact-input-shadow);
 }
+
 .contact-input:not(textarea) {
     font-size: 1em;
     height: 3.5ch;
@@ -969,10 +987,12 @@ textarea.contact-input {
 .contact-submit-button {
     border: none;
     font-family: inherit;
+    font-size: .8em;
     height: 55px;
     width: 150px;
     color: #fff;
-    background-color: hsla(216 75% 36% / 100%);
+    /* background-color: hsla(216 75% 36% / 100%); */
+    background: linear-gradient(95.17deg, #186590 4.8%, #15386D 98.19%);
     border-radius: 20px;
 }
 
@@ -995,6 +1015,75 @@ textarea.contact-input {
 }
 .company-phone-and-fax {
 
+}
+.contact-services-checkbox-container {
+    color: var(--contact-info-color);
+}
+.contact-services-selection-title {
+    color: var(--contact-desktop-title-color);
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+.contact-services-checkbox-holder input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.contact-services-checkbox-holder > div {
+    position: relative;
+    padding: 5px 0px 5px 35px;
+}
+.contact-services-checkbox-holder label {
+    font-size: 1em;
+}
+.contact-services-checkbox-holder label:hover, .contact-services-checkbox-holder input:checked ~ label {
+    color: #fff;
+}
+.contact-services-checkbox-holder label:hover ~ .contact-page__checkbox-color-div, .contact-services-checkbox-holder input:checked ~ .contact-page__checkbox-color-div {
+    background-color: #35469D;
+}
+.contact-services-checkbox-holder label:hover .contact-page__custom-checkbox, .contact-services-checkbox-holder input:checked ~ label .contact-page__custom-checkbox {
+    background-color: #0D3571;
+}
+.contact-page__custom-checkbox img {
+    display: none;
+}
+.contact-services-checkbox-holder input:checked ~ label .contact-page__custom-checkbox img {
+    display: block;
+    object-fit: cover;
+    height: 19px;
+    width: 19px;
+}
+
+
+.contact-page__checkbox-color-div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 5px; 
+}
+.contact-page__custom-checkbox {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 1px #86A8FF;
+    transition: .4s background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.medium-vert-spacer {
+    width: 100%;
+    height: 10vh;
 }
 
 /* ---------------------------------------------------------------------------------------------------------
@@ -2096,7 +2185,7 @@ Larger than Tablet Media Query
         left: 41%;
         height: 171vh;
         width: 58vw;
-        
+        z-index: -1;        
     }
     .outer-holder.light .contact-splash-image-holder {
         position: absolute;
@@ -2122,14 +2211,63 @@ Larger than Tablet Media Query
     }
     .contact-us-form {
         margin-left: 2%;
+        align-items: flex-start;
     }
     .contact-us-form > div {
         position: relative;
-        margin: 3% 0;
+        margin: 15px 0;
+    }
+    .contact-name-holder {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .input-holder {
+        margin-bottom: unset;
+    }
+
+    .contact-name-holder > div + div {
+        margin-left: 20px;
+    }
+    .contact-page-shadow-box {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 276px;
+        z-index: -1;
+        opacity: 0;
+        box-shadow: var(--contact-input-shadow);
+        transition: opacity .1s ease-in-out;
+    }
+    .contact-text-holder .contact-page-shadow-box {
+        width: 35vw;
+    }
+    .contact-input {
+        width: 276px;
+    }
+    .contact-input:focus ~ .contact-page-shadow-box {
+        opacity: 1;
+        box-shadow: var(--contact-input-shadow);
     }
     textarea.contact-input {
         height: 30vh;
         width: 35vw;
+    }
+
+    .contact-services-checkbox-container {
+        max-width: 45vw;
+    }
+    .contact-services-checkbox-holder {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contact-services-checkbox-holder > div {
+        flex-basis: 362px; /*362 px to get everything on one line(currently @.9em font */
+        margin: 10px 20px 0 0;
+    }
+    .contact-services-checkbox-holder label {
+        font-size: .9em;
     }
 
 
