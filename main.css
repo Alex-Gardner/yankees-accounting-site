@@ -42,7 +42,7 @@ button, a {
 
 .outer-holder.light {
     --mainBGColor: #fff;
-    --headerBGColor: hsla(0 0% 87% / 72%);
+    --headerBGColor: hsla(0 0% 95% / 72%);
     --headerBGVariableOpacity: hsla(0 0% 95% / 90%);
     --mobileOverlayShade: hsla(0 0% 100% / 90%);
     --headlineColor: #000;
@@ -353,7 +353,7 @@ button, a {
 .company-advertisement-blurb {
     font-size: 1em;
     color: var(--headlineColor);
-    padding: 1% 10%;
+    padding: 1ch 10%;
     font-weight: 400;
 }
 .learn-more-button {
@@ -1865,6 +1865,142 @@ Business Financing Page
 ----------------------------------------------------------------------------------------------------------- */
 
 
+/* ---------------------------------------------------------------------------------------------------------
+                                Tax Planning Page
+----------------------------------------------------------------------------------------------------------- */
+
+.tax-planning__main {
+    display: flex;
+    flex-direction: column;
+    /* width: 95vw; */
+}
+.large-vert-spacer {
+    width: 100%;
+    height: 15vh;
+}
+div[data-height='6vh'] {
+    width: 100%;
+    height: 6vh;
+}
+
+.tax-planning__hero-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 61px);
+}
+
+.tax-planning__text-watermark {
+    position: absolute;
+    font-size: 105px;
+    writing-mode: vertical-lr;
+    z-index: -1;
+    top: 80px;
+    right: 0;
+    color: hsla(0 0% 50% / 50%);
+    opacity: 0;
+    transform: translate(0, -40%);
+    animation: 1s ease-in 0s 1 forwards fadeIn, 1s ease-in 0s 1 forwards slideDown;
+    -webkit-animation: 1s ease-in 0s 1 forwards fadeIn, 1s ease-in 0s 1 forwards slideDown;
+    -moz-animation: 1s ease-in 0s 1 forwards fadeIn, 1s ease-in 0s 1 forwards slideDown;
+}
+.tax-planning__hero-img-holder {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+}
+.tax-planning__hero-image {
+    position: absolute;
+    z-index: -1;
+    object-fit: contain;
+    height: 100%;
+}
+.tax-planning__hero-text-holder {
+    background-color: var(--mobileOverlayShade);  /*!! Replace with variable*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.tax-planning__page-title {
+    font-size: 3.2em;
+    font-weight: 400;
+}
+.tax-planning__hero-blurb {
+    padding: 0 max(15px, 10vw);
+    color: var(--blurbTextColor);
+    /* max-width: 50ch; */
+}
+
+.tax-planning__scroll-notice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tax-planning__scroll-notice p {
+    margin-bottom: 15px;
+}
+.tax-planning__hero-accent-highlight {
+    display: none;
+}
+
+
+
+/* --------------------- */
+
+.tax-planning__content-holder {
+
+}
+.tax-planning__details-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tax-planning__details-item > img {
+    object-fit: cover;
+    width: 100%;
+    height: 30vh;
+}
+.tax-planning__red-overlay-cross-collage.collage-cross {
+    width: 30vh;
+}
+.tax-planning__details-desc-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tax-planning__details-title {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 30px;
+    font-weight: 500;
+}
+
+.tax-planning__details-explanation {
+    margin-bottom: 20px;
+    color: var(--blurbTextColor);
+    max-width: 50ch;
+    padding: 0 3ch;
+}
+
+
+
+
+
+.tax-planning__deadlines-list {
+    color: #E55353;
+    margin: 10px 0;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------
+                                
+----------------------------------------------------------------------------------------------------------- */
+
+
 
 
 /* --------------------------
@@ -3037,9 +3173,147 @@ Business Financing Page
     
 }
 
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------
+                                Tax Planning Page
+----------------------------------------------------------------------------------------------------------- */
+
+.tax-planning__hero-section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 61px);
+}
+
+.tax-planning__text-watermark {
+    font-size: 169px;
+    top: 16vh;
+    right: 2vw;
+}
+.tax-planning__hero-img-holder {
+    position: relative;
+    flex-basis: 60vw;
+    flex-grow: 1;
+    z-index: unset;
+    width: unset;
+}
+.tax-planning__hero-img-overlay-holder {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.tax-planning__hero-img-cover {
+    flex-grow: 1;
+    flex-basis: 33%;
+    background-color: var(--mainBGColor);  
+}
+.tax-planning__hero-img-cover:nth-child(1) {
+    opacity: 1;
+    animation: 1s ease-in 0s 1 forwards fadeOut;
+    -webkit-animation: 1.5s ease-in 0s 1 forwards fadeOut;
+    -moz-animation: 1.5s ease-in 0s 1 forwards fadeOut;
+}
+.tax-planning__hero-img-cover:nth-child(2) {
+    opacity: 1;
+    animation: 1.5s ease-in .5s 1 forwards fadeOut;
+    -webkit-animation: 1.5s ease-in .5s 1 forwards fadeOut;
+    -moz-animation: 1.5s ease-in .5s 1 forwards fadeOut;
+}
+.tax-planning__hero-img-cover:nth-child(3) {
+    opacity: 1;
+    animation: 1.5s ease-in 1.5s 1 forwards fadeOut;
+    -webkit-animation: 1.5s ease-in 1.5s 1 forwards fadeOut;
+    -moz-animation: 1.5s ease-in 1.5s 1 forwards fadeOut;
+}
+.tax-planning__hero-image {
+    position: static;
+    object-fit: cover;
+    width: 100%;
+}
+.tax-planning__hero-text-holder {
+    flex-shrink: 1;
+    flex-basis: 40vw;
+    width: 100%;
+}
+
+.tax-planning__hero-blurb {
+    padding: 0 30px;
+}
+
+.tax-planning__hero-accent-highlight {
+    position: absolute;
+    display: unset;
+    /* height: 12vh; */
+    width: 15vw;
+    bottom: 0;
+    right: 0;
+}
+
+/* --------------------- */
+.medium-vert-spacer {
+    display: none;
+}
+.tax-planning__content-holder {
+
+}
+.tax-planning__details-item {
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.tax-planning__details-item > img {
+    height: unset;
+    width: 35vw;
+    max-height: 80vh;
+}
+.tax-planning__red-overlay-cross-collage.collage-cross {
+    width: 35vw;
+}
+.tax-planning__details-desc-holder {
+    align-items: flex-start;
+    flex-basis: 50vw;
+}
+.tax-planning__details-title {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    text-align: left;
+}
+.tax-planning__details-explanation {
+    font-size: 1.1em;
+    padding: 0 3ch 0 5ch;
+    line-height: 1.3;
+}
+.tax-planning__details-explanation + .tax-planning__details-title {
+    margin-top: 3ch;
+}
+.tax-planning__deadlines-list {
+    color: #E55353;
+    margin: 10px 0 10px 10vw;
+}
+
+
+
+
 /* ---------------------------------------------------------------------------------------------------------
                                 
 ----------------------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------------------------------------
+                                
+----------------------------------------------------------------------------------------------------------- */
+
+
+
+
 
 
 }
@@ -3055,6 +3329,14 @@ Business Financing Page
         opacity: 1;
     }
 }
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 @keyframes slideRight {
     0% {
         transform: translate(-10%);
@@ -3066,6 +3348,14 @@ Business Financing Page
 @keyframes slideUp {
     0% {
         transform: translate(0, 10%);
+    }
+    100% {
+        transform: translate(0, 0%);
+    }    
+}
+@keyframes slideDown {
+    0% {
+        transform: translate(0, -40%);
     }
     100% {
         transform: translate(0, 0%);
