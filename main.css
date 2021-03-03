@@ -626,6 +626,17 @@ button, a {
     color: var(--serviceDescriptionTextColor);
     font-weight: 300;
 }
+.detail-item-description + .detail-item-description {
+    margin-top: 1ch;
+}
+.detail-item-description.for-accountant__service-notice {
+    font-size: .9em;
+    font-weight: 500;
+    margin-top: 1ch;
+}
+.for-accountand__cta-link {
+    color: var(--testimonial-contact-link-color);
+}
 .detail-itemization {
     align-self: start;
     text-align: left;
