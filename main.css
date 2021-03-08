@@ -8,6 +8,7 @@
 html {
     font-size: clamp(14px, calc(3vw + 1vh), 21px);
     scroll-behavior: smooth;
+    /* scrollbar-color: rgba(0 0 0 / 0%); */
 }
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -990,7 +991,7 @@ textarea.contact-input {
     width: 70vw;
     resize: vertical;
     /* font-family: inherit; */
-    font-size: .8em;
+    font-size: .9em;
     font-weight: 500;
     font-family: 'Quicksand', sans-serif;
     /* color: var(--contact-input-text-color); */
@@ -1279,6 +1280,186 @@ textarea.contact-input {
 }
 
 
+.management-assistance-large-spacer {
+    width: 100%;
+    height: 20vh;
+}
+
+/*        ----------------------------------------------------------         */
+/*  Business Support Form */
+
+.mang-assistance__form-holder {
+    padding: 0 1ch;
+    width: 100%;
+}
+
+.management-assistance__business-contact-form textarea, .management-assistance__business-contact-form input[type="text"], .management-assistance__business-contact-form input[type="date"], .management-assistance__business-contact-form input[type="tel"] {
+    font-size: .9em;
+    font-weight: 400;
+}
+
+.mang-assistance__business-contact-form-title {
+    font-size: 2.1em;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    margin: 2ch 0;
+}
+.mang-assistance__business-contact-form-title::after {
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    height: 3px;
+    width: 10ch;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--headlineColor);
+}
+
+.business-contact-vert-spacer-1 {
+    width: 100%;
+    height: 10vh;
+}
+
+input[type="radio"] {
+    margin-left: 1ch;
+}
+
+
+.mang-assistance__business-identification {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mang-assistance__business-identification > label {
+    margin: 2ch 0;
+}
+
+.mang-assistance__business-identification > label {
+    font-weight: 600;
+}
+
+.mang-assistance__business-details > label, .mang-assistance__business-details p, .mang-assistance__business-details > div > label {
+    font-weight: 600;
+}
+.mang-assistance__insurance-details > label, .mang-assistance__insurance-details p, .mang-assistance__insurance-details > div > label {
+    font-weight: 600;
+}
+
+.mang-assistance__support-contact_notes {
+    font-weight: 600;
+}
+
+
+
+.management-assistance__business-contact-form input[type="text"], .management-assistance__business-contact-form input[type="date"], .management-assistance__business-contact-form input[type="tel"] {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1ch;
+}
+
+/* .mang-assistance__business-identification > label > input:not(business-support-form__telephone-number) {
+    max-width: 30ch;
+} */
+
+.mang-assistance__support-contact_address, .mang-assistance__support-contact_notes {
+    display: flex;
+    flex-direction: column;
+}
+
+.mang-assistance__business-details > * {
+    margin: 3ch 0;
+}
+
+/* .mang-assistance__support-contact_address, .mang-assistance__support-contact_incorporation-type-holder {
+    margin-bottom: 2ch;
+} */
+
+.mang-assistance__support-contact_address-input {
+    max-width: 40ch;
+    height: 10ch;
+    margin-top: 1ch;
+}
+
+.mang-assistance__business-details > div > p {
+    margin-bottom: 1ch;
+}
+
+
+
+
+
+
+
+.mang-assistance__insurance-details > * {
+    margin: 3ch 0;
+}
+.mang-assistance__insurance-details > div > p {
+    margin-bottom: 1ch;
+}
+
+
+.management-assistance__business-contact-form input[type="text"], .management-assistance__business-contact-form input[type="tel"] {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1ch;
+    height: 4ch;
+}
+.mang-assistance__support-contact_client-name-input, .mang-assistance__support-contact_business-name-input {
+    width: 30ch;
+}
+
+
+.mang-assistance__support_conditional-followup-question {
+    margin-left: 3ch;
+    position: relative;
+}
+.mang-assistance__support_conditional-followup-question::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 6ch;
+    background-color: var(--headlineColor);
+    left: -12px;
+    top: 3px;
+}
+
+
+.mang-assistance__support-contact_business-type-input {
+    width: 35ch;
+}
+
+.mang-assistance__support-contact_register-date-input {
+    
+}
+
+
+.mang-assistance__support-contact_notes-input {
+    max-width: 80ch;
+    height: 30ch;
+    margin: 1ch 0 2ch 0;
+}
+
+.business-support-submission-button {
+    border: none;
+    font-family: inherit;
+    font-size: .9em;
+    height: 55px;
+    width: 150px;
+    color: #fff;
+    background: linear-gradient(95.17deg, #186590 4.8%, #15386D 98.19%);
+    border-radius: 20px;
+}
+
+
+
+
+.business-assistance-estimated-cost {
+    font-size: .8em;
+    margin: 2ch 0;
+    max-width: 70ch;
+}
 /* ---------------------------------------------------------------------------------------------------------
                                 
 ----------------------------------------------------------------------------------------------------------- */
@@ -2422,6 +2603,10 @@ Larger than Tablet Media Query
 /* ---------------------------------------------------------------------------------------------------------
                                 Management Assistance Page
 ----------------------------------------------------------------------------------------------------------- */
+    .management-assistance-title { 
+        font-size: 5em;
+    }   
+
     .mang-items {
         flex-direction: row;
         justify-content: space-around;
@@ -2447,23 +2632,23 @@ Larger than Tablet Media Query
     }
     .mang-items-upper div:nth-child(1) {
         animation: 1s ease-in .1s 1 forwards fadeIn;
-        -webkit-animation: 1s ease-in .5s 1 forwards fadeIn;
-        -moz-animation: 1s ease-in .5s 1 forwards fadeIn;
+        -webkit-animation: 1s ease-in .1s 1 forwards fadeIn;
+        -moz-animation: 1s ease-in .1s 1 forwards fadeIn;
     }
     .mang-items-upper div:nth-child(2) {
-        animation: 1s ease-in 2.5s 1 forwards fadeIn;
-        -webkit-animation: 1s ease-in 2.5s 1 forwards fadeIn;
-        -moz-animation: 1s ease-in 2.5s 1 forwards fadeIn;
+        animation: 1s ease-in 1.1s 1 forwards fadeIn;
+        -webkit-animation: 1s ease-in 1.1s 1 forwards fadeIn;
+        -moz-animation: 1s ease-in 1.1s 1 forwards fadeIn;
     }
     .mang-items-lower div:nth-child(1) {
-        animation: 1s ease-in 1.5s 1 forwards fadeIn;
-        -webkit-animation: 1s ease-in 1.5s 1 forwards fadeIn;
-        -moz-animation: 1s ease-in 1.5s 1 forwards fadeIn;
+        animation: 1s ease-in .6s 1 forwards fadeIn;
+        -webkit-animation: 1s ease-in .6s 1 forwards fadeIn;
+        -moz-animation: 1s ease-in .6s 1 forwards fadeIn;
     }
     .mang-items-lower div:nth-child(2) {
-        animation: 1s ease-in 3.5s 1 forwards fadeIn;
-        -webkit-animation: 1s ease-in 3.5s 1 forwards fadeIn;
-        -moz-animation: 1s ease-in 3.5s 1 forwards fadeIn;
+        animation: 1s ease-in 1.6s 1 forwards fadeIn;
+        -webkit-animation: 1s ease-in 1.6s 1 forwards fadeIn;
+        -moz-animation: 1s ease-in 1.6s 1 forwards fadeIn;
     }
     
     /* .bookkeeper-logo *:hover {
@@ -2522,6 +2707,28 @@ Larger than Tablet Media Query
     .no-surprise-statement-holder {
         margin: 3%;
     }
+
+
+
+
+
+
+
+
+    .mang-assistance__business-identification {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 40vw);
+    }
+
+
+    .mang-assistance__support-contact_client-name-input, .mang-assistance__support-contact_business-name-input {
+        height: 5ch;
+        width: 30ch;
+    }
+
+
+
 
 /* ---------------------------------------------------------------------------------------------------------
                         
