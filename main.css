@@ -19,7 +19,7 @@ html {
 
 body {
     font-family: 'Raleway', 'Arial', sans-serif;
-    background-color: #171717;
+    background-color: #111;
     display: flex;
     justify-content: center;
 }
@@ -94,6 +94,7 @@ button, a {
     --bookkeeper-blurb-color: #696969;
     --bookkeeper-features-title-color: #003B95;
     --features-item-text-color: #292929;
+    --support-contact-form-background: linear-gradient(193.13deg, #F1F9FE 2.05%, #EDFEFD 95.8%);
 
     --purchase-sales-splash-overlay-shade: hsla(0 0% 100% / 60%);
     --purchase-sales-splash-text-color: #313131;
@@ -161,6 +162,7 @@ button, a {
     --bookkeeper-blurb-color: #696969;
     --bookkeeper-features-title-color: #B5FFD2;
     --features-item-text-color: #CFCFCF;
+    --support-contact-form-background: linear-gradient(166.84deg, #0D1319 1.81%, #0B0C0D 97.84%);
 
     --purchase-sales-splash-overlay-shade: hsla(0 0% 0% / 53%);
     --purchase-sales-splash-text-color: #f2f2f2;
@@ -1289,13 +1291,20 @@ textarea.contact-input {
 /*  Business Support Form */
 
 .mang-assistance__form-holder {
-    padding: 0 1ch;
+    padding: 0 2ch;
     width: 100%;
+    background: var(--support-contact-form-background);
+    color: var(--blurbTextColor);
 }
 
 .management-assistance__business-contact-form textarea, .management-assistance__business-contact-form input[type="text"], .management-assistance__business-contact-form input[type="date"], .management-assistance__business-contact-form input[type="tel"] {
     font-size: .9em;
     font-weight: 400;
+    /* background-color: #242424; */
+    background-color: var(--mainBGColor);
+    color: var(--headlineColor);
+    border: 2px solid #6f6f6f;
+    border-radius: 10px;
 }
 
 .mang-assistance__business-contact-form-title {
@@ -1304,6 +1313,7 @@ textarea.contact-input {
     text-align: center;
     position: relative;
     margin: 2ch 0;
+    color: var(--contact-desktop-title-color);
 }
 .mang-assistance__business-contact-form-title::after {
     position: absolute;
@@ -1333,14 +1343,11 @@ input[type="radio"] {
 }
 
 .mang-assistance__business-identification > label {
-    margin: 2ch 0;
-}
-
-.mang-assistance__business-identification > label {
+    margin: 1.5ch 0;
     font-weight: 600;
 }
 
-.mang-assistance__business-details > label, .mang-assistance__business-details p, .mang-assistance__business-details > div > label {
+.mang-assistance__business-details > label, .mang-assistance__business-details p, .mang-assistance__business-details > div > label, .mang-assistance__support-contact_register-date {
     font-weight: 600;
 }
 .mang-assistance__insurance-details > label, .mang-assistance__insurance-details p, .mang-assistance__insurance-details > div > label {
@@ -1368,7 +1375,7 @@ input[type="radio"] {
     flex-direction: column;
 }
 
-.mang-assistance__business-details > * {
+.mang-assistance__business-details > *{
     margin: 3ch 0;
 }
 
@@ -1381,9 +1388,19 @@ input[type="radio"] {
     height: 10ch;
     margin-top: 1ch;
 }
+.mang-assistance__support-contact_registered-holder {
+    margin-bottom: 1ch;
+}
 
+
+.mang-assistance__business-details > div > div > p {
+    margin-bottom: 1ch;
+}
 .mang-assistance__business-details > div > p {
     margin-bottom: 1ch;
+}
+.mang-assistance__support-contact_register-date, .mang-assistance__support-contact_registered-holder-title {
+    margin: 1ch 0;
 }
 
 
@@ -1395,7 +1412,7 @@ input[type="radio"] {
 .mang-assistance__insurance-details > * {
     margin: 3ch 0;
 }
-.mang-assistance__insurance-details > div > p {
+.mang-assistance__insurance-details > div > div > p {
     margin-bottom: 1ch;
 }
 
@@ -1413,6 +1430,7 @@ input[type="radio"] {
 
 .mang-assistance__support_conditional-followup-question {
     margin-left: 3ch;
+    margin-top: 1ch;
     position: relative;
 }
 .mang-assistance__support_conditional-followup-question::before {
@@ -1430,8 +1448,8 @@ input[type="radio"] {
     width: 35ch;
 }
 
-.mang-assistance__support-contact_register-date-input {
-    
+.mang-assistance__support-contact_register-date-input::-webkit-calendar-picker-indicator {
+    background-color: #c4c4c4;
 }
 
 
@@ -2713,12 +2731,26 @@ Larger than Tablet Media Query
 
 
 
-
+    .mang-assistance__form-holder {
+        padding: 0 5ch;
+    }
 
     .mang-assistance__business-identification {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, 40vw);
+        grid-template-columns: repeat(2, 44vw);
+    }
+    
+    .mang-assistance__business-details {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 44vw);
+    }
+    
+    .mang-assistance__insurance-details {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 44vw);
     }
 
 
