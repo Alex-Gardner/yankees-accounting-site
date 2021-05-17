@@ -86,7 +86,7 @@ button, a {
     --contact-input-text-color: #000;
     --contact-input-border: 2px solid hsla(0 0% 82% /100%);
     --contact-desktop-title-color: #3F3F3F;
-    --contact-info-color: #949494;
+    --contact-info-color: #707070;
     --contact-info-contrast: #141414;
 
     --mang-assistance-splash-overlay:   hsla(0 0% 0% / 10%);
@@ -1057,6 +1057,10 @@ textarea.contact-input {
 }
 .contact-services-checkbox-holder label:hover ~ .contact-page__checkbox-color-div, .contact-services-checkbox-holder input:checked ~ .contact-page__checkbox-color-div {
     background-color: #35469D;
+}
+
+.contact-services-checkbox-holder input:focus ~ .contact-page__checkbox-color-div {
+    outline: 3px dotted #35469D;
 }
 .contact-services-checkbox-holder label:hover .contact-page__custom-checkbox, .contact-services-checkbox-holder input:checked ~ label .contact-page__custom-checkbox {
     background-color: #0D3571;
