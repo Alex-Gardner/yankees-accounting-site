@@ -54,3 +54,14 @@ HR PAGE
 
 Business Financing Page
 - Change LI markers to custom version (idea1 - diamond over circle)
+
+
+
+
+
+05/20 
+undo button styles
+
+5/21
+dark mode variables
+desktop size layout

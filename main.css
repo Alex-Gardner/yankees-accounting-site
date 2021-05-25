@@ -56,7 +56,7 @@ button, a {
     --accentButtonColor: hsla(216 33% 29% / 100%);
     --secondaryContrastColor: hsla(216 33% 29% / 100%);
     --secondaryContrastVariableOpacity: 216 33% 29% /;
-    --serviceDescriptionTextColor: hsla(0 0% 38% / 100%);
+    --serviceDescriptionTextColor: hsla(0 0% 30% / 100%);
     --buttonAccentColor: hsla(0 0% 0% / 100%);
     --buttonArrowAccent: hsla(39 100% 89% / 100%);
     --imageOverlayShade: hsla(0 0% 100% / 85%);
@@ -102,7 +102,13 @@ button, a {
     --hrHeroBgColor: #F1F1FC;
     --HRHeroImgWallColor: #F8F8FF;
     --HRHeroImgFloorColor: #F5F5FC;
-    --hr-page-bg-shade: #fff;  
+    --hr-page-bg-shade: #fff; 
+    --hr-page-radial-hero-bg: radial-gradient(50.17% 91.44% at 12.58% 27.75%, rgba(196, 196, 196, 0) 4.69%, rgba(255, 255, 255, 0) 37.5%, #FFFFFF 100%);
+    --hr-needs-btn-shadow: 3px 5px 11px rgba(0, 0, 0, 0.25);
+    --hr-needs-btn-bg: linear-gradient(98.25deg, #F1FAFF 2.55%, #C9EBFF 100%);
+    --hr-needs-btn-bg-inactive: linear-gradient(261.83deg, #FFFFFF 0.7%, #F2F2F2 98.25%);
+    --hr-needs-btn-shadow-inactive: 2px 3px 6px rgba(0, 0, 0, 0.05);
+    --hr-needs-btn-inactive-text: hsla(0 0% 96% / 100%);
 
     --bg-gradient-start: hsla(0 0% 100% / 90%);
     --bg-gradient-end: hsla(0 0% 100% / 0%);
@@ -172,6 +178,13 @@ button, a {
     --HRHeroImgFloorColor: #141414;
     --hr-page-bg-shade: #171717;
     --hr-page-bg-shade: hsla(0 0% 0% / 0%);
+    --hr-page-radial-hero-bg: radial-gradient(50.17% 91.44% at 12.58% 27.75%, rgba(196, 196, 196, 0) 4.69%, rgba(17, 17, 17, 0) 37.5%, #171717 100%);
+    --hr-needs-btn-shadow: 5px 8px 7px rgba(0, 0, 0, 0.6);
+    --hr-needs-btn-bg: linear-gradient(98.08deg, #1F1F1F 2.55%, #0B1E1D 97.17%);
+    --hr-needs-btn-bg-inactive: linear-gradient(261.56deg, #0D0D0D 0.04%, #171717 100.02%);
+    --hr-needs-btn-shadow-inactive: 3px 5px 6px rgba(0, 0, 0, 0.2);
+    --hr-needs-btn-inactive-text: hsla(0 0% 9% / 100%);
+
 
     --bg-gradient-start: hsla(0 0% 9% / 90%);
     --bg-gradient-end: hsla(0 0% 9% / 0%);
@@ -1614,125 +1627,111 @@ Human Resources Page
 }
 
 .hr-hero-section {
+    width: 100%;
+    position: relative;
+}
+.hr-hero-img-holder {
+    width: 100%;
+}
+.hr-hero-img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.hr-hero-text-holder {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     display: flex;
-    flex-direction: column-reverse;
-    background-color: var(--hrHeroBgColor); 
-}
-.hr-hero-drawing {
-    flex-basis: 60%;
-}
-.outer-holder.dark .hr-hero-img-wall {
-    fill: var(--HRHeroImgWallColor);
-}
-.outer-holder.dark .hr-hero-img-floor {
-    fill: var(--HRHeroImgFloorColor);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background: var(--hr-page-radial-hero-bg);
+
 }
 .hr-page-title {
-    font-size: 3.5em;
-    font-weight: 500;
-    text-align: center;
+    font-size: 2.5em;
+    font-weight: 300;
+    margin-left: 40%;
+    margin-bottom: 3vh;
+    padding-right: 10px;
+}
+.hr-hero-desc {
+    max-width: 50%;
+    font-size: 1em;
+    padding-right: 10px;
+    color: var(--blurbTextColor);
 }
 
-.hr-title-letter-1 {
-    color: #339CFD;
-}
-.hr-title-letter-2 {
-    color: #9D5BF1;
-}
 
-.icon-holder svg {
-    height: auto;
-    width: max(60px, 30%);
-}
-.icon-holder-1 svg {
-    width: max(60px, 40%);
-}
-.icon-holder-2 svg {
-    height: max(60px, 80%);
-    width: auto;
-}
-.icon-holder-3 svg {
-    width: max(60px, 40%);
-}
-
-.outer-holder.dark .hr-interactive-section-outside-window {
-    fill: #0A0D2B;
-}
-.outer-holder.dark .hr-interactive-section-outside-clouds {
-    fill: #525252;
-}
-.outer-holder.dark .hr-interactive-section-bg-wall {
-    fill: #252525;
-}
-.outer-holder.dark .hr-interactive-section-bg-floor {
-    fill: #1D1D1D;
-}
+/* ------------------------------------- */
 .hr-information-content-holder {
-    margin-top: 5vh;
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
+    margin-top: 10vh;
 }
-.hr-interactions-and-icons-holder {
-    position: relative;
+.hr-needs-desc-button-holder {
     display: flex;
     flex-direction: column;
+    padding: 10px;
+    gap: 44px;
     min-height: 100vh;
+    /* justify-content: space-between; */
 }
-.hr-interactions-and-icons-holder > * {
-    /* width: 100%;
-    height: 100%; */
-}
-.hr-interactions-and-icons-holder > * > * {
+.hr-needs-btn {
     display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+    position: relative;
+    text-align: left;
+    border-radius: 9.2vw;
+    height: 130px;
+    font-size: 1em;
     align-items: center;
-    justify-content: center;
-    height: 25vh;
-    width: 80vw;
-}
-
-.movable-icons-holder {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: -1;
-    padding: 0;
-    margin: 0;
     border: none;
-    background-color: rgba(255, 255, 255, 0);
+    background: var(--hr-needs-btn-bg);
+    box-shadow: var(--hr-needs-btn-shadow);
+        
+}
+.hr-needs-btn:nth-child(odd) {
+    padding-left: 70px;
+}
+.hr-needs-btn:nth-child(even) {
+    padding-right: 70px;
 }
 
-.movable-icons-holder > div:nth-child(2) {
-    background: linear-gradient(113.28deg, #FFFFFF 2.6%, #FF2F3C 107.59%);
-    order: 2;
+
+.hr-needs-button-img-holder {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    height: 64px;
+    width: 64px;    
 }
-.movable-icons-holder > div:nth-child(3) {
-    background: linear-gradient(113.28deg, #D7F8FF 2.6%, #01B6DE 107.59%);
-    order: 4;
+.hr-needs-btn:nth-child(odd) .hr-needs-button-img-holder {
+    left: 2px;
 }
-.movable-icons-holder > div:nth-child(4) {
-    background: linear-gradient(113.28deg, #9BF7D6 2.6%, #0BBBB0 107.59%);
-    order: 3;
+.hr-needs-btn:nth-child(even) .hr-needs-button-img-holder {
+    right: 2px;
 }
 
-.movable-icons-holder > div:first-child {
-    background: linear-gradient(113.28deg, hsla(227 100% 83% / 100%) 2.6%, hsla(266 71% 62% / 100%) 107.59%);
-}
-
-.hr-text-information-holder {
-    display: flex;
-    flex-direction: column;
-}
-.svg-office-holder {
+.hr-needs-button-img {
+    height: 100%;
     width: 100%;
-    height: auto;
 }
-.hr-text-information-holder > div {
-    /* background-color: hsla(100 100% 100% / 85%);  variable for light and dark    */
-    background-color: var(--hr-page-bg-shade);  /*variable for light and dark   */ 
-    background-color: var(--serviceItemOverlayShade);  /*variable for light and dark   */ 
+.hr-needs-button-desc {
+    color: var(--blurbTextColor);
 }
+
+.hr-splash-client-image-holder {
+    display: none;
+}
+
+
+
+
 .hr-info-blurb {
     font-size: calc(5px + 3vw);
     font-weight: 500;
@@ -1740,9 +1739,6 @@ Human Resources Page
     color: var(--blurbTextColor);
 }
 
-.person-with-box {
-    transform: translateY(6%);
-}
 
 
 /* ---------------------------------------------------- */ 
@@ -1760,8 +1756,8 @@ Human Resources Page
 
 .hr-extended-services-title {
     text-align: center;
-    font-size: 2em;
-    font-weight: 500;
+    font-size: 2.4em;
+    font-weight: 300;
 }
 
 .hr-services-text-holder {
@@ -1876,8 +1872,8 @@ Business Financing Page
     display: flex;
     justify-content: center;
     align-items: center;
-    height: max(1vw, 115px);
-    background-color: #C41D1D;
+    height: max(.2vw, 50px);
+    background-color: #9D2020;
     width: 100%;
 }
 .biz-fin__covid-headline {
@@ -2936,237 +2932,172 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
 ----------------------------------------------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------------------------------------------
-                                            Human Resources Page
+                                            Human Resources Page  
 ----------------------------------------------------------------------------------------------------------- */
 
 .human-resources-page-content {
+    overflow: hidden;
 }
 
 .hr-hero-section {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--hrHeroBgColor); 
+    min-width: min(98vw, 1800px);
+    position: relative;
 }
-.hr-hero-drawing {
-    flex-basis: 60%;
+.hr-hero-img-holder {
+    width: 80%;
+    height: calc(105vh);
 }
-.outer-holder.dark .hr-hero-img-wall {
-    fill: var(--HRHeroImgWallColor);
-}
-.outer-holder.dark .hr-hero-img-floor {
-    fill: var(--HRHeroImgFloorColor);
-}
-.hr-page-title {
-    font-size: 6em;
-    font-weight: 400;
-    text-align: left;
+.hr-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.hr-page-title .title-span-2 {
-    margin-left: 4%;
+.hr-hero-text-holder {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hr-page-title {
+    display: inline-block;
+    font-size: 5em;
+    font-weight: 300;
+    margin-left: unset;
+    margin-bottom: 7vh;
+    padding-right: 10px;
+}
+.hr-hero-desc {
+    max-width: 40vw;
+    font-size: 1.4em;
+    padding-right: 10px;
+}
+
+/* ------------------------------------ */
+
+.hr-information-content-holder {
+    margin: 10vh 0;
+}
+.hr-needs-desc-button-holder {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 40px;
+    min-height: unset;
+}
+.hr-needs-btn {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    position: relative;
+    text-align: left;
+    border-radius: 40px;
+    height: 160px;
+    font-size: 1em;
+    align-items: center;
+    border: none;
+    background: var(--hr-needs-btn-bg);
+    box-shadow: var(--hr-needs-btn-shadow);
+}
+.hr-needs-btn:nth-child(odd) {
+    padding-left: 90px;
+}
+.hr-needs-btn:nth-child(even) {
+    padding-right: 90px;
+}
+
+
+.hr-needs-button-img-holder {
+    position: absolute;
+    top: 5px;
+    transform: translateY(0);
+    height: 80px;
+    width: 80px;    
+}
+.hr-needs-btn:nth-child(odd) .hr-needs-button-img-holder {
+    left: 5px;
+}
+.hr-needs-btn:nth-child(even) .hr-needs-button-img-holder {
+    right: 5px;
+}
+
+.hr-needs-button-img {
+    height: 100%;
+    width: 100%;
+}
+.hr-needs-button-desc {
+    color: var(--blurbTextColor);
 }
 
 .hr-information-content-holder {
-    margin-top: 0;
-    min-height: 60vw;
     display: flex;
     flex-direction: row;
-    /* margin-top: 5%; */
     align-items: center;
 }
-.hr-interactions-and-icons-holder {
+.hr-needs-desc-button-holder {
+    flex-basis: max(25vw, 500px);
+}
+
+.hr-splash-client-image-holder {
+    flex-grow: 1;
     display: block;
+    flex-basis: 70vw;
     position: relative;
-    min-height: auto;;
-    flex-basis: 40vw;
-    /* width: 46vw; */
-    height: 20vw;
-    margin-left: 2%;
+    height: 90vh;
 }
-.hr-interactions-and-icons-holder > * {
-    width: 100%;
+.hr-splash-client-image-holder img {
+    top: 0;
+    right: 0;
     height: 100%;
-}
-.hr-interactions-and-icons-holder > * > * {
-    width: 50%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.svg-office-holder {
-    width: unset;
-    flex-basis: 60vw;
-}
-.icon-holder svg {
-    height: auto;
-    width: max(60px, 30%);
-}
-.icon-holder-1 svg {
-    width: max(60px, 50%);
-}
-.icon-holder-2 svg {
-    height: max(60px, 80%);
-    width: auto;
-}
-.icon-holder-3 svg {
-    width: max(60px, 55%);
+    width: 100%;
+    object-fit: cover;
+    transition: opacity .3s ease-in;
 }
 
-.movable-icons-holder {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.hr-active-scene-1 .hr-splash-dec-img:not(.hr-splash-img-1) {
     position: absolute;
-    z-index: 1;
-    padding: 0;
-    margin: 0;
-    border: none;
-    background-color: rgba(255, 255, 255, 0);
-    cursor: pointer;  
+    opacity: 0;
 }
-.movable-icons-holder:focus {
-    outline: none;
-    animation: dancingShadowLight 5s ease-in 0s infinite;
+.hr-active-scene-2 .hr-splash-dec-img:not(.hr-splash-img-2) {
+    position: absolute;
+    opacity: 0;
 }
-.outer-holder.dark .movable-icons-holder:focus {
-    outline: none;
-    animation: dancingShadowLight 5s ease-in 0s infinite;
-    animation: dancingShadowDark 5s ease-in 0s infinite;
+.hr-active-scene-3 .hr-splash-dec-img:not(.hr-splash-img-3) {
+    position: absolute;
+    opacity: 0;
 }
-.outer-holder.light .movable-icons-holder.dancing-shadow {
-    animation: dancingShadowLight 5s ease-in 0s infinite;
-}
-.outer-holder.dark .movable-icons-holder.dancing-shadow {
-    animation: dancingShadowDark 5s ease-in 0s infinite;
-}
-.movable-icons-holder > div:nth-child(2) {
-    background: linear-gradient(113.28deg, #FFFFFF 2.6%, #FF2F3C 107.59%);
-    order: 2;
-}
-.movable-icons-holder > div:nth-child(3) {
-    background: linear-gradient(113.28deg, #D7F8FF 2.6%, #01B6DE 107.59%);
-    order: 4;
-}
-.movable-icons-holder > div:nth-child(4) {
-    background: linear-gradient(113.28deg, #9BF7D6 2.6%, #0BBBB0 107.59%);
-    order: 3;
-}
-.movable-icons-holder > div:nth-child(4) svg {
-    transform: translate(0, -5%);
-}
-.movable-icons-holder > div:first-child {
-    background: rgba(0 0 0 / 0%);
-}
-.hr-text-information-holder {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.hr-info-blurb {
-    font-size: calc(3px + 1vw);
-    padding: 2%;
-}
-.hr-text-information-holder > div {
-    background-color: var(--hr-page-bg-shade);  /*variable for light and dark   */ 
+.hr-active-scene-4 .hr-splash-dec-img:not(.hr-splash-img-4) {
+    position: absolute;
+    opacity: 0;
 }
 
+.hr-needs-btn-active {
+    background: var(--hr-needs-btn-bg);
+    box-shadow: var(--hr-needs-btn-shadow);
+}
+.hr-needs-btn-inactive {
+    background: var(--hr-needs-btn-bg-inactive);
+    box-shadow: var(--hr-needs-btn-shadow-inactive);
+}
+.hr-needs-btn-inactive p {
+    color: var(--hr-needs-btn-inactive-text);
+}
 
-/*  HR Information oTransformation Stations */
-
-.hr-information-content-holder .movable-icons-holder > div {
+.hr-needs-btn-inactive .hr-needs-button-img {
+    opacity: 10%;
+}
+.hr-needs-btn-active .hr-needs-button-img-holder {
+    transform: translateY(-35%);
     transition: transform .3s;
 }
-.hr-information-content-holder .movable-icons-holder > div:nth-child(1) {
-    transition-delay: .9s;
-}
-.hr-information-content-holder .movable-icons-holder > div:nth-child(2) {
-    transition-delay: .6s;
-}
-.hr-information-content-holder .movable-icons-holder > div:nth-child(3) {
-    transition-delay: .3s;
-}
-.hr-information-content-holder .movable-icons-holder > div:nth-child(4) {
-    transition-delay: 0s;
-}
-.hr-station-0 .movable-icons-holder > div {
-    transform: translate(0,0);
-}
-.hr-station-1 .movable-icons-holder > div:nth-child(1) {
-    transform: translate(100%, 0);
-}
-.hr-station-1 .movable-icons-holder > div:nth-child(2) {
-    transform: translate(0, 100%);
-}
-.hr-station-1 .movable-icons-holder > div:nth-child(3) {
-    transform: translate(-100%, 0);
-}
-.hr-station-1 .movable-icons-holder > div:nth-child(4) {
-    transform: translate(0, -100%);
-}
-/* ---------------------- */ 
-/* ---------------------- */ 
-.hr-station-2 .movable-icons-holder > div:nth-child(1) {
-    transform: translate(100%, 100%);
-}
-.hr-station-2 .movable-icons-holder > div:nth-child(2) {
-    transform: translate(-100%, 100%);
-}
-.hr-station-2 .movable-icons-holder > div:nth-child(3) {
-    transform: translate(-100%, -100%);
-}
-.hr-station-2 .movable-icons-holder > div:nth-child(4) {
-    transform: translate(100%, -100%);
-}
-/* ---------------------- */ 
-/* ---------------------- */ 
-.hr-station-3 .movable-icons-holder > div:nth-child(1) {
-    transform: translate(0, 100%);
-}
-.hr-station-3 .movable-icons-holder > div:nth-child(2) {
-    transform: translate(-100%, 0);
-}
-.hr-station-3 .movable-icons-holder > div:nth-child(3) {
-    transform: translate(0, -100%);
-}
-.hr-station-3 .movable-icons-holder > div:nth-child(4) {
-    transform: translate(100%, 0);
-}
 
-.hr-station-0 .blurb-and-icon-holder:not(.hr-holder-1) p{
-    opacity: 0;
-}
-.hr-station-1 .blurb-and-icon-holder:not(.hr-holder-2) p{
-    opacity: 0;
-}
-.hr-station-2 .blurb-and-icon-holder:not(.hr-holder-4) p{
-    opacity: 0;
-}
-.hr-station-3 .blurb-and-icon-holder:not(.hr-holder-3) p{
-    opacity: 0;
-}
 
-.person-with-box {
-    transform: translateY(6%);
-}
-
-.svg-office-holder .people-group {
-    opacity: 0;
-}
-.people-group {
-    transition: opacity .5s;
-}
-
-.office-holder-click-1 .worker-and-computer {
-    opacity: 1;
-}
-
-.office-holder-click-3 .manager-and-plant {
-    opacity: 1;
-}
-.office-holder-click-2 .lifter-and-box {
-    opacity: 1;
-}
 
 /* -------------------- 
 
@@ -3206,9 +3137,6 @@ section.purchase-sales-section-holder:not(.purchase-sales-splash-holder) img {
     bottom: -80px;
     right: 21%;
 }
-
-
-
 
 
 .hr-text-watermark-1 {
