@@ -3424,9 +3424,13 @@ Business Financing Page
     flex-basis: 40vw;
     width: 100%;
 }
+.tax-planning__page-title {
+    font-size: 3.8em;
+    margin-top: 2ch;
+}
 
 .tax-planning__hero-blurb {
-    padding: 0 30px;
+    padding: 0 60px;
 }
 
 .tax-planning__hero-accent-highlight {

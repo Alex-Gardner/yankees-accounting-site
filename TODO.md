@@ -58,6 +58,10 @@ Business Financing Page
 
 
 
+Marketing Copy Ideas: 
+Maximize both your time and earnings
+
+
 
 05/20 
 undo button styles
@@ -65,3 +69,6 @@ undo button styles
 5/21
 dark mode variables
 desktop size layout
+
+07/21
+Location notification for each page in nav link (change link text color on active page)
