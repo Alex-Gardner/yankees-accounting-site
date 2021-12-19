@@ -11,7 +11,8 @@ const bizAcquisitionSplashImg = document.querySelector('#purchase-sales-biz-acq-
 const slideInItems = document.querySelectorAll('.slide-right, .slide-left')
 
 /* Useful debounce function in top level scope - taken from: 
-https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086*/
+https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086
+*/
 
 const debounce = (func, wait) => {
     let timeout;
@@ -96,18 +97,18 @@ function toggleLightDarkMode() {
     const slideInOptions = {
         threshold: .8
     };
-    const slideInOberver = new IntersectionObserver (function(entries, slideInOberver) {
+    const slideInObserver = new IntersectionObserver (function(entries, slideInObserver) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {return}
             else {
                 entry.target.classList.add('appear');
-                slideInOberver.unobserve(entry.target);
+                slideInObserver.unobserve(entry.target);
             }
         })
     }, slideInOptions)
 
     slideInItems.forEach(item => {
-        slideInOberver.observe(item)
+        slideInObserver.observe(item)
     })
 })();
 

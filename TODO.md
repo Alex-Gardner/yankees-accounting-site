@@ -72,3 +72,9 @@ desktop size layout
 
 07/21
 Location notification for each page in nav link (change link text color on active page)
+
+09/01
+Home page title font change (Cinzel?)
+Sub section title font increase (2.5em)
+White space increase ^
+Title Inside BG image?
