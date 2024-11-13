@@ -68,32 +68,184 @@
                     <div class="contact-blurb-divider"></div>
                     <p class="phone-cta">Please give us a call at: (646) 383-3684 or (646) 383-3673</p>
                     <br>
-                    <p class="email-cta">Or an email at <a href="mailto:name@yankeesaccounting.com">name@yksaccting.com</a></p>
+                    <p class="email-cta">Or an email at <a href="mailto:info@access-manage.com">info@access-manage.com</a></p>
                     <div class="contact-form-message-divider"></div>
                     <p class="or-divider-cta">-Or-</p>
                     <div class="contact-form-message-divider"></div>
-                    <p class="send-message-cta">Send Us A Message:</p>
+                    <p class="send-message-cta">Please send your request to our team.</p>
                 </div>
 
                 <form class="contact-us-form" action="https://formspree.io/xjvpbkga" method="POST">
                     <div class="contact-name-holder">
-                        <input class="contact-input" id="contact-form-name" name="contact-form-name" type="text" required>
-                        <label for="contact-form-name" >Name</label>
+                        <div class="input-holder">
+                            <input class="contact-input" id="contact-form-name" name="contact-form-name" type="text" required>
+                            <label for="contact-form-name">First Name</label>
+                            <div class="contact-page-shadow-box"></div>
+                        </div>
+                        <div class="input-holder">
+                            <input class="contact-input" id="contact-form-name-last" name="contact-form-name-last" type="text" required>
+                            <label for="contact-form-name-last">Last Name</label>
+                            <div class="contact-page-shadow-box"></div>
+                        </div>
                     </div>
-
-                    <div class="contact-phone-holder">
+                    
+                    <div class="input-holder contact-company-holder">
+                        <input placeholder="Company Name (If Applicable)" class="contact-input" id="contact-form-company" name="contact-form-company" type="tel">
+                        <label for="contact-form-company">Company Name (If Applicable)</label>
+                        <div class="contact-page-shadow-box"></div>
+                    </div>
+                    
+                    <div class="input-holder contact-phone-holder">
                         <input class="contact-input" id="contact-form-phone-number" name="contact-form-phone-number" type="tel" required>
                         <label for="contact-form-phone-number">Phone Number</label>
+                        <div class="contact-page-shadow-box"></div>
                     </div>
-
-                    <div class="contact-email-holder">
+                    
+                    <div class="input-holder contact-email-holder">
                         <input class="contact-input" title="Please enter an email address: e.g. person@example.com" id="contact-form-email" name="contact-form-email" type="text" required>
                         <label for="contact-form-email">Email</label>
+                        <div class="contact-page-shadow-box"></div>
+                    </div>
+                    
+                    <div class="input-holder contact-location-holder">
+                        <input class="contact-input" title="postal code" id="contact-form-location" name="contact-form-location" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                        <label for="contact-form-email">ZIP/Postal Code</label>
+                        <div class="contact-page-shadow-box"></div>
                     </div>
 
-                    <div class="contact-text-holder">
+                    <div class="contact-services-checkbox-container">
+                        <h2 class="contact-services-selection-title">Please select the services you would like assistance with.</h2>
+                        <div class="contact-services-checkbox-holder">
+                            <div>
+                                <input type="checkbox" id="contact-service-human-resources" name="contact-service-human-resources" class="contact-page__service-item">
+                                <label for="contact-service-human-resources">
+                                    Human Resources
+                                    <span class="contact-page__custom-checkbox">
+                                        <img src="./assets/icons/checkbox-mark.svg" alt="" class="contact-page__checkmark-image">
+                                    </span>
+                                </label>
+                                <!-- <span class="contact-page__custom-checkbox"></span> -->
+                                <div class="contact-page__checkbox-color-div"></div>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="contact-service-payroll" name="contact-service-payroll" class="contact-page__service-item">
+                                <label for="contact-service-payroll">Payroll Services
+
+                                    <span class="contact-page__custom-checkbox">
+                                        <img src="./assets/icons/checkbox-mark.svg" alt="" class="contact-page__checkmark-image">
+                                    </span>
+                                </label>
+                                <div class="contact-page__checkbox-color-div"></div>
+
+                            </div>
+                            <div>
+                                <input type="checkbox" id="contact-service-management-assistance" name="contact-service-management-assistance" class="contact-page__service-item">
+                                <label for="contact-service-management-assistance">Management Assistance
+
+                                    <span class="contact-page__custom-checkbox">
+                                        <img src="./assets/icons/checkbox-mark.svg" alt="" class="contact-page__checkmark-image">
+                                    </span>
+                                </label>
+                                <div class="contact-page__checkbox-color-div"></div>
+
+                            </div>
+                            <div>
+                                <input type="checkbox" id="contact-service-purchase-sales" name="contact-service-purchase-sales" class="contact-page__service-item">
+                                <label for="contact-service-purchase-sales">Purchasing or Sales
+
+                                    <span class="contact-page__custom-checkbox">
+                                        <img src="./assets/icons/checkbox-mark.svg" alt="" class="contact-page__checkmark-image">
+                                    </span>
+                                </label>
+                                <div class="contact-page__checkbox-color-div"></div>
+
+                            </div>
+                            <div>
+                                <input type="checkbox" id="contact-service-business-financing" name="contact-service-business-financing" class="contact-page__service-item">
+                                <label for="contact-service-business-financing">Business Financing
+
+                                    <span class="contact-page__custom-checkbox">
+                                        <img src="./assets/icons/checkbox-mark.svg" alt="" class="contact-page__checkmark-image">
+                                    </span>
+                                </label>
+                                <div class="contact-page__checkbox-color-div"></div>
+
+                            </div>
+                            <div>
+                                <input type="checkbox" id="contact-service-ppp-loans" name="contact-service-ppp-loans" class="contact-page__service-item">
+                                <label for="contact-service-ppp-loans">PPP Loans or Grants
+
+                                    <span class="contact-page__custom-checkbox">
+                                        <img src="./assets/icons/checkbox-mark.svg" alt="" class="contact-page__checkmark-image">
+                                    </span>
+                                </label>
+                                <div class="contact-page__checkbox-color-div"></div>
+
+                            </div>
+                            <div>
+                                <input type="checkbox" id="contact-service-eidl-relief" name="contact-service-eidl-relief" class="contact-page__service-item">
+                                <label for="contact-service-eidl-relief">Non-COVID EIDL relief loan from SBA
+
+                                    <span class="contact-page__custom-checkbox">
+                                        <img src="./assets/icons/checkbox-mark.svg" alt="" class="contact-page__checkmark-image">
+                                    </span>
+                                </label>
+                                <div class="contact-page__checkbox-color-div"></div>
+
+                            </div>
+                            <div>
+                                <input type="checkbox" id="contact-service-business-tax" name="contact-service-business-tax" class="contact-page__service-item">
+                                <label for="contact-service-business-tax">Business Tax
+
+                                    <span class="contact-page__custom-checkbox">
+                                        <img src="./assets/icons/checkbox-mark.svg" alt="" class="contact-page__checkmark-image">
+                                    </span>
+                                </label>
+                                <div class="contact-page__checkbox-color-div"></div>
+
+                            </div>
+                            <div>
+                                <input type="checkbox" id="contact-service-personal-tax" name="contact-service-personal-tax" class="contact-page__service-item">
+                                <label for="contact-service-personal-tax">Personal Tax
+                                    
+                                    <span class="contact-page__custom-checkbox">
+                                        <img src="./assets/icons/checkbox-mark.svg" alt="" class="contact-page__checkmark-image">
+                                    </span>
+                                </label>
+                                <div class="contact-page__checkbox-color-div"></div>
+
+                            </div>
+                            <div>
+                                <input type="checkbox" id="contact-service-bookkeeping" name="contact-service-bookkeeping" class="contact-page__service-item">
+                                <label for="contact-service-bookkeeping">Bookkeeping
+
+                                    <span class="contact-page__custom-checkbox">
+                                        <img src="./assets/icons/checkbox-mark.svg" alt="" class="contact-page__checkmark-image">
+                                    </span>
+                                </label>
+                                <div class="contact-page__checkbox-color-div"></div>
+
+                            </div>
+                            <div>
+                                <input type="checkbox" id="contact-service-tax-planning" name="contact-service-tax-planning" class="contact-page__service-item">
+                                <label for="contact-service-tax-planning">Tax Planning - Business & Personal
+
+                                    <span class="contact-page__custom-checkbox">
+                                        <img src="./assets/icons/checkbox-mark.svg" alt="" class="contact-page__checkmark-image">
+                                    </span>
+                                </label>
+                                <div class="contact-page__checkbox-color-div"></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="medium-vert-spacer"></div>
+                    
+                    <div class="input-holder contact-text-holder">
                         <textarea class="contact-input" id="contact-form-text-message" name="contact-form-text-message" required></textarea>
-                        <label for="contact-form-text-message">Your Message</label>
+                        <label for="contact-form-text-message">Additional Information and/or Questions</label>
+                        <div class="contact-page-shadow-box"></div>
                     </div>
                     <input type="submit" id="submit-contact" class="contact-submit-button" value="Get In Touch">
                 </form>
@@ -135,7 +287,7 @@
                         <div class="icon-image-holder email-icon-holder">
                             <img src="./assets/icons/email-icon.svg" alt="email icon" class="email-icon">
                         </div>
-                        <p class="email-contact"><a href="mailto:name@yankeesaccounting.com">name@yksaccting.com</a></p>
+                        <p class="email-contact"><a href="mailto:info@access-manage.com">info@access-manage.com</a></p>
                     </div>
                 </div>
                 

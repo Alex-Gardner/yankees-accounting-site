@@ -11,7 +11,8 @@ const bizAcquisitionSplashImg = document.querySelector('#purchase-sales-biz-acq-
 const slideInItems = document.querySelectorAll('.slide-right, .slide-left')
 
 /* Useful debounce function in top level scope - taken from: 
-https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086*/
+https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086
+*/
 
 const debounce = (func, wait) => {
     let timeout;
@@ -46,7 +47,6 @@ function setDefaultMode(modeChoice) {
 }
 
 (function readDefaultMode() {
-    console.log(colorScheme)
     if (colorScheme === 'light') {
         pageRoot.classList.add('light')
         lightDarkText.innerHTML = "Dark"
@@ -97,18 +97,18 @@ function toggleLightDarkMode() {
     const slideInOptions = {
         threshold: .8
     };
-    const slideInOberver = new IntersectionObserver (function(entries, slideInOberver) {
+    const slideInObserver = new IntersectionObserver (function(entries, slideInObserver) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {return}
             else {
                 entry.target.classList.add('appear');
-                slideInOberver.unobserve(entry.target);
+                slideInObserver.unobserve(entry.target);
             }
         })
     }, slideInOptions)
 
     slideInItems.forEach(item => {
-        slideInOberver.observe(item)
+        slideInObserver.observe(item)
     })
 })();
 
@@ -121,47 +121,74 @@ serviceItemList.forEach(serviceItem => {
 })
 
 // ----------------- HR Page ------------------------------
-const hrButtonIcons = document.querySelectorAll('.hr-movable-icon');
-const hrPageMainSection = document.querySelector('#hr-information-content-holder')
-const hrIconsButton = document.querySelector('#hr-movable-icons-btn');
-const svgHROfficeHolder = document.querySelector('#svg-office-holder');
+// const hrButtonIcons = document.querySelectorAll('.hr-movable-icon');
+// const hrPageMainSection = document.querySelector('#hr-information-content-holder')
+// const hrIconsButton = document.querySelector('#hr-movable-icons-btn');
+// const svgHROfficeHolder = document.querySelector('#svg-office-holder');
 
-if (hrButtonIcons) {
-    let currentStation = 0;
-    let clickCounter = 0;
-    function changeHRIconStation() {
-        clickCounter++;
-        hrPageMainSection.classList.replace(`hr-station-${currentStation }`, `hr-station-${(currentStation + 1) % 4}`);
-        currentStation = (currentStation + 1) % 4;
+// if (hrButtonIcons) {
+//     let currentStation = 0;
+//     let clickCounter = 0;
+//     function changeHRIconStation() {
+//         clickCounter++;
+//         hrPageMainSection.classList.replace(`hr-station-${currentStation }`, `hr-station-${(currentStation + 1) % 4}`);
+//         currentStation = (currentStation + 1) % 4;
+//     }
+//     function visibleHRWorkers() {
+//         if (svgHROfficeHolder.classList.contains('holder-hidden')) {
+//             svgHROfficeHolder.classList.replace('holder-hidden', 'visible-state')
+//         }
+//     }
+//     function fadeInPersonSVG() {
+//         if (clickCounter <= 4) {
+//             svgHROfficeHolder.classList.add(`office-holder-click-${clickCounter}`)
+//         }
+//     }
+//     function stopButtonGlow() {
+//         if (clickCounter >= 3) {
+//             hrIconsButton.classList.remove('dancing-shadow')
+//         }
+//     }
+//     // function changeHRState() {
+//     //     changeHRIconStation();
+//     //     visibleHRWorkers();
+//     //     fadeInPersonSVG();
+//     //     stopButtonGlow();
+//     // }
+//     var changeHRState = debounce(function() {
+//         changeHRIconStation();
+//         visibleHRWorkers();
+//         fadeInPersonSVG();
+//         stopButtonGlow();
+//     }, 200)
+//     hrIconsButton.onclick = changeHRState;
+//     // on button click, advance station - (currentstation +1) % 4
+//     // replace currentStation className with currentStation's className
+// }
+
+const hrInformationContentHolder = document.querySelector('#hr-information-content-holder');
+
+if (hrInformationContentHolder) {
+    let hrNeedsButtonList = document.querySelectorAll('.hr-needs-btn');
+    
+    let currentButtonState = 1;
+    
+    function updateHRButtonState(buttonState) {
+        hrInformationContentHolder.classList.replace(`hr-active-scene-${currentButtonState}`, `hr-active-scene-${buttonState}`)
+        currentButtonState = buttonState;
     }
-    function visibleHRWorkers() {
-        if (svgHROfficeHolder.classList.contains('holder-hidden')) {
-            svgHROfficeHolder.classList.replace('holder-hidden', 'visible-state')
-        }
-    }
-    function fadeInPersonSVG() {
-        if (clickCounter <= 4) {
-            svgHROfficeHolder.classList.add(`office-holder-click-${clickCounter}`)
-        }
-    }
-    function stopButtonGlow() {
-        if (clickCounter >= 3) {
-            hrIconsButton.classList.remove('dancing-shadow')
-        }
-    }
-    // function changeHRState() {
-    //     changeHRIconStation();
-    //     visibleHRWorkers();
-    //     fadeInPersonSVG();
-    //     stopButtonGlow();
-    // }
-    var changeHRState = debounce(function() {
-        changeHRIconStation();
-        visibleHRWorkers();
-        fadeInPersonSVG();
-        stopButtonGlow();
-    }, 200)
-    hrIconsButton.onclick = changeHRState;
-    // on button click, advance station - (currentstation +1) % 4
-    // replace currentStation className with currentStation's className
-}
+    
+    hrNeedsButtonList.forEach( (button,index) => {
+        button.id = `hr-needs-button-${index + 1}`
+        button.addEventListener("click", function() {
+            let currentActiveButton = document.querySelector('.hr-needs-btn-active');
+            currentActiveButton.classList.replace('hr-needs-btn-active', 'hr-needs-btn-inactive');
+            updateHRButtonState(index + 1 );
+            document.querySelector(`#hr-needs-button-${index + 1}`).classList.replace('hr-needs-btn-inactive', 'hr-needs-btn-active');
+        }, false);
+    })
+
+} 
+
+
+

@@ -54,3 +54,27 @@ HR PAGE
 
 Business Financing Page
 - Change LI markers to custom version (idea1 - diamond over circle)
+
+
+
+
+Marketing Copy Ideas: 
+Maximize both your time and earnings
+
+
+
+05/20 
+undo button styles
+
+5/21
+dark mode variables
+desktop size layout
+
+07/21
+Location notification for each page in nav link (change link text color on active page)
+
+09/01
+Home page title font change (Cinzel?)
+Sub section title font increase (2.5em)
+White space increase ^
+Title Inside BG image?
